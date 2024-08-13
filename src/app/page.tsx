@@ -1,4 +1,5 @@
 import { ButtonColorOut } from "@/components/ButtonColorOut";
+import { useGlobalState } from "@/contexts/globalVariable";
 import Image from "next/image";
 
 export default function Home() {
@@ -13,7 +14,12 @@ export default function Home() {
           </div>
         </ButtonColorOut>
         <ButtonColorOut>
-          <Image src={"https://picsum.photos/200"} width={200} height={200} alt={""} />
+          <Image
+            src={"https://picsum.photos/200"}
+            width={200}
+            height={200}
+            alt={""}
+          />
         </ButtonColorOut>
         <ButtonColorOut>test3</ButtonColorOut>
         <ButtonColorOut>test4</ButtonColorOut>
