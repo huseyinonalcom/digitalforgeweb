@@ -1,7 +1,7 @@
 const baseUrl = "https://emlakmerkezi.net";
 
-const locales: string[] = ["tr", "en"];
-const pages: string[] = ["", "/listings", "/listings/favourites", "/register"];
+const locales: string[] = ["tr", "en", "nl", "fr"];
+const pages: string[] = ["", "/about", "/services", "/hotpress", "/contact", "/projects"];
 
 const createSitemapUrlSet = (pages: string[], locales: string[]): string => {
   const urlSets = locales.map((locale) =>
