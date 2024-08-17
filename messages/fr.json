@@ -1,0 +1,15 @@
+{
+  "common": {
+    "locale": "fr",
+    "hot_press": "Hot Press",
+    "projects": "Projets",
+    "services": "Services",
+    "about_us": "À Propos de Nous",
+    "references": "Références",
+    "contact": "Contact",
+    "intro_title": "Faites votre présence en ligne",
+    "intro_text": "Nous sommes votre partenaire en marketing digital et développement",
+    "intro_projects": "Nos Projets",
+    "intro_contact": "Contactez-nous"
+  }
+}

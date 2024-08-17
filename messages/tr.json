@@ -1,0 +1,15 @@
+{
+  "common": {
+    "locale": "tr",
+    "hot_press": "Hot PRess",
+    "projects": "Projeler",
+    "services": "Hizmetler",
+    "about_us": "Hakkımızda",
+    "references": "Referanslar",
+    "contact": "İletişim",
+    "intro_title": "Çevrimiçi varlığınızı belirleyin",
+    "intro_text": "Dijital pazarlama ve geliştirme konusunda sizin ortağınızız",
+    "intro_projects": "Projelerimiz",
+    "intro_contact": "Bize Ulaşın"
+  }
+}
