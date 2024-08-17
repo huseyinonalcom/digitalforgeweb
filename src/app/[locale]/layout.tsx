@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { MainHeader } from "@/components/MainHeader";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { NextIntlClientProvider, useMessages } from "next-intl";
+import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "DigitalForge",
@@ -15,6 +15,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
+  unstable_setRequestLocale(locale);
   const messages = await getMessages();
   return (
     <html lang={locale}>
@@ -32,7 +33,7 @@ export default async function RootLayout({
       <body className="bg-white">
         <NextIntlClientProvider messages={messages}>
           <MainHeader />
-          <main className="bg-white">{children}</main>
+          <main className="flex flex-col items-center p-24">{children}</main>
         </NextIntlClientProvider>
       </body>
     </html>

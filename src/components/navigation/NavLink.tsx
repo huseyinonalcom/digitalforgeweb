@@ -11,8 +11,12 @@ export const NavLink = ({ children, href, ...props }: NavLinkProps) => {
   if (!href.startsWith("/")) {
     href = "/" + href;
   }
+  if (!href.startsWith("/" + t("locale"))) {
+    href = "/" + t("locale") + href;
+  }
+
   return (
-    <Link href={t("locale") + href} className={`no-underline duration-300 text-black hover:text-blue-500`} {...props}>
+    <Link href={href} className={`no-underline duration-300 text-black hover:text-blue-500`} {...props}>
       {children}
     </Link>
   );

@@ -14,10 +14,10 @@ const LanguageSwitcher = () => {
   const params = useParams();
 
   const flags = [
-    { image: "assets/flags/en.svg", code: "en" },
-    { image: "assets/flags/tr.svg", code: "tr" },
-    { image: "assets/flags/fr.svg", code: "fr" },
-    { image: "assets/flags/nl.svg", code: "nl" },
+    { image: "/assets/flags/en.svg", code: "en" },
+    { image: "/assets/flags/tr.svg", code: "tr" },
+    { image: "/assets/flags/fr.svg", code: "fr" },
+    { image: "/assets/flags/nl.svg", code: "nl" },
   ];
 
   function changeLocale(locale: Locale) {
