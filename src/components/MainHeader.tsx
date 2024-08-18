@@ -27,7 +27,7 @@ export const MainHeader = () => {
   };
 
   return (
-    <header className="shadow px-6 py-1 w-full items-center z-50 sticky top-0 bg-gray-300/20 backdrop-blur-md flex flex-row justify-around lg:grid grid-cols-3">
+    <header className="shadow px-6 py-1 w-full items-center z-50 sticky top-0 bg-white/70 backdrop-blur-md flex flex-row justify-around lg:grid grid-cols-3">
       <div className="w-full hidden lg:flex flex-row items-center justify-around">
         {links1.map((link1) => (
           <Fragment key={link1.href}>{link(link1.href, link1.text)}</Fragment>

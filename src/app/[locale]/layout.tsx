@@ -30,10 +30,10 @@ export default async function Layout({
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body className="bg-white">
+      <body>
         <NextIntlClientProvider messages={messages}>
           <MainHeader />
-          <main className="flex flex-col items-center p-12">{children}</main>
+          <main className="h-[calc(100vh-67px)] bg-black overflow-y-auto flex flex-col items-center p-12">{children}</main>
         </NextIntlClientProvider>
       </body>
     </html>

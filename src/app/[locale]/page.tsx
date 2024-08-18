@@ -1,4 +1,5 @@
 import { ButtonColorOut } from "@/components/ButtonColorOut";
+import AnimatedBackground from "@/components/fluff/AnimatedBackground";
 import { NavLink } from "@/components/navigation/NavLink";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
@@ -12,10 +13,10 @@ type Props = {
 export default function Home({ params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
   const t = useTranslations();
-  const maxWidth = "max-w-[1300px]";
+  const maxWidth = "max-w-[1400px]";
   return (
-    <div className="flex flex-col w-full gap-12 items-center">
-      <div className="w-full flex flex-row justify-around gap-5">
+    <div className="flex flex-col w-full gap-12 items-center bg-black">
+      <div className={`w-full flex flex-row ${maxWidth} justify-around gap-5 bg-white p-4 rounded-md`}>
         <div className="flex flex-col gap-2 items-center justify-center">
           <h1 className="text-4xl font-bold">{t("intro-title")}</h1>
           <p className="text-lg text-center">{t("intro-text")}</p>
@@ -32,13 +33,13 @@ export default function Home({ params: { locale } }: Props) {
           <Image src="/assets/logos/dflogo.svg" alt="Digital Forge Logo" width={400} height={400} />
         </div>
       </div>
-      <div className={`w-full flex flex-row ${maxWidth} justify-around gap-5`}>
+      <div className={`w-full flex flex-row ${maxWidth} justify-around gap-5 bg-white p-4 rounded-md`}>
         <div className="flex flex-col gap-2 items-center justify-center">
           <h1 className="text-4xl font-bold">{t("who-are-we-title")}</h1>
           <p className="text-lg text-center">{t("who-are-we-text")}</p>
         </div>
       </div>
-      <div className={`w-full flex flex-row ${maxWidth} justify-around gap-5`}>
+      <div className={`w-full flex flex-row ${maxWidth} justify-around gap-5 bg-white p-4 rounded-md`}>
         <div className="flex flex-col gap-6 items-center justify-center">
           <h1 className="text-4xl font-bold">{t("services-title")}</h1>
           <div className="grid grid-cols-3 gap-12 w-full">
@@ -60,7 +61,7 @@ export default function Home({ params: { locale } }: Props) {
           </div>
         </div>
       </div>
-      <div className={`w-full flex flex-col ${maxWidth} justify-around gap-5`}>
+      <div className={`w-full flex flex-col ${maxWidth} justify-around gap-5 bg-white p-4 rounded-md`}>
         <h1 className="text-4xl font-bold">{t("why-us-title")}</h1>
         <div className="flex flex-col gap-2 items-start justify-center">
           <h1 className="text-2xl font-bold">{t("why-us-1-title")}</h1>
@@ -74,6 +75,7 @@ export default function Home({ params: { locale } }: Props) {
           <p className="text-justify font-bold">{t("why-us-5-text")}</p>
         </div>
       </div>
+      <AnimatedBackground backgroundColor="black" />
     </div>
   );
 }
