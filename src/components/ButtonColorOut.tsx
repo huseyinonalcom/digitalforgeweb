@@ -8,7 +8,7 @@ export function ButtonColorOut({ children, ...props }: ButtonColorOutProps) {
   return (
     <button
       {...props}
-      className={`group relative inline-flex items-center justify-center overflow-hidden rounded-md bg-neutral-950 p-6 font-medium text-white active:text-black`}
+      className={`group relative inline-flex items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 py-4 font-medium text-white active:text-black`}
     >
       <span className={`absolute inset-0 grid place-items-center`}>
         <span

@@ -46,15 +46,9 @@ export default function Contact({ params: { locale } }: Props) {
         <input type="text" name="_honey" className="hidden" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_template" value="box" />
-
-        <button
-          name="Send"
-          aria-label="Send"
-          type="submit"
-          className="w-full rounded-2xl bg-[#524f4e] py-2 font-bold text-white duration-500 hover:bg-[#363332]"
-        >
+        <ButtonColorOut name="Send" aria-label="Send" type="submit">
           {t("send")}
-        </button>
+        </ButtonColorOut>
       </form>
     </div>
   );

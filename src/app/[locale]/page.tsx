@@ -41,28 +41,28 @@ export default function Home({ params: { locale } }: Props) {
       <div className={`w-full flex flex-row ${maxWidth} justify-around gap-5`}>
         <div className="flex flex-col gap-6 items-center justify-center">
           <h1 className="text-4xl font-bold">{t("services-title")}</h1>
-          <div className="grid grid-cols-3 gap-4 w-full">
-            <div className="flex flex-col items-center">
-              <FaChartLine size={64} />
+          <div className="grid grid-cols-3 gap-12 w-full">
+            <div className="flex flex-col gap-2 items-center">
+              <FaChartLine color="yellow" className="bg-black p-4 rounded-md" size={64} />
               <h1 className="text-2xl font-bold">{t("services-1-title")}</h1>
               <p className="text-justify">{t("services-1-text")}</p>
             </div>
-            <div className="flex flex-col items-center">
-              <FaPaintBrush size={64} />
+            <div className="flex flex-col gap-2 items-center">
+              <FaPaintBrush color="red" className="bg-black p-4 rounded-md" size={64} />
               <h1 className="text-2xl font-bold">{t("services-2-title")}</h1>
               <p className="text-justify">{t("services-2-text")}</p>
             </div>
-            <div className="flex flex-col items-center">
-              <FaCode size={64} />
+            <div className="flex flex-col gap-2 items-center">
+              <FaCode color="#1fa800" className="bg-black p-4 rounded-md" size={64} />
               <h1 className="text-2xl font-bold">{t("services-3-title")}</h1>
               <p className="text-justify">{t("services-3-text")}</p>
             </div>
           </div>
         </div>
       </div>
-      <div className={`w-full flex flex-row ${maxWidth} justify-around gap-5`}>
-        <div className="flex flex-col gap-2 items-center justify-center">
-          <h1 className="text-4xl font-bold">{t("why-us-title")}</h1>
+      <div className={`w-full flex flex-col ${maxWidth} justify-around gap-5`}>
+        <h1 className="text-4xl font-bold">{t("why-us-title")}</h1>
+        <div className="flex flex-col gap-2 items-start justify-center">
           <h1 className="text-2xl font-bold">{t("why-us-1-title")}</h1>
           <p className="text-justify">{t("why-us-1-text")}</p>
           <h1 className="text-2xl font-bold">{t("why-us-2-title")}</h1>

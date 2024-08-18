@@ -17,7 +17,7 @@ export const OutlinedInput = ({ name, label, error, ...rest }: Props) => {
           name={name}
           aria-label={label ?? name}
           id={name}
-          className="block pb-1.5 pt-3  px-2.5 bg-white w-full text-sm text-black bg-transparent -0 border-2 border-gray-300 outline-none focus:ring-0 focus:border-[var(--theme-color-main)] peer"
+          className="block pb-1.5 pt-3 px-2.5 bg-white w-full text-sm text-black bg-transparent -0 border-2 border-gray-300 outline-none focus:ring-0 focus:border-[var(--theme-color-main)] peer"
           placeholder=""
         />
         <label
