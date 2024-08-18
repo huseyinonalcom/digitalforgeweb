@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { MainHeader } from "@/components/MainHeader";
-import { NextIntlClientProvider, useMessages } from "next-intl";
+import { NextIntlClientProvider } from "next-intl";
 import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Digital Forge: International Digital Marketing and Development Agency",
 };
 
-export default async function RootLayout({
+export default async function Layout({
   children,
   params: { locale },
 }: Readonly<{

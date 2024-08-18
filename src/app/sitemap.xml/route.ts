@@ -1,4 +1,4 @@
-const baseUrl = "https://emlakmerkezi.net";
+const baseUrl = "https://digitalforge.be";
 
 const locales: string[] = ["tr", "en", "nl", "fr"];
 const pages: string[] = ["", "/about", "/services", "/hotpress", "/contact", "/projects"];
