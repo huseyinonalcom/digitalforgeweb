@@ -14,14 +14,14 @@ export default function About({ params: { locale } }: Props) {
   return (
     <div className="w-full flex flex-row justify-around gap-5">
       <div className="flex flex-col gap-2 items-center justify-center">
-        <h1 className="text-4xl font-bold">{t("intro_title")}</h1>
-        <p className="text-lg text-center">{t("intro_text")}</p>
+        <h1 className="text-4xl font-bold">{t("intro-title")}</h1>
+        <p className="text-lg text-center">{t("intro-text")}</p>
         <div className="flex flex-row gap-4">
           <NavLink href="projects">
-            <ButtonColorOut>{t("intro_projects")}</ButtonColorOut>
+            <ButtonColorOut>{t("intro-projects")}</ButtonColorOut>
           </NavLink>
           <NavLink href="contact">
-            <ButtonColorOut>{t("intro_contact")}</ButtonColorOut>
+            <ButtonColorOut>{t("intro-contact")}</ButtonColorOut>
           </NavLink>
         </div>
       </div>

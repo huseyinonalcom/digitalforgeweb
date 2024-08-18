@@ -8,13 +8,13 @@ import LanguageSwitcher from "./LangSwitcher";
 export const MainHeader = () => {
   const t = useTranslations();
   const links1 = [
-    { href: "hotpress", text: t("hot_press") },
+    { href: "hotpress", text: t("hot-press") },
     { href: "projects", text: t("projects") },
     { href: "services", text: t("services") },
   ];
 
   const links2 = [
-    { href: "about", text: t("about_us") },
+    { href: "about", text: t("about-us") },
     { href: "contact", text: t("contact") },
   ];
 
@@ -35,7 +35,7 @@ export const MainHeader = () => {
       </div>
       <div className="lg:w-full flex flex-row items-center justify-center">
         <NavLink href={`/`}>
-          <Image src="/assets/logos/dflogo.svg" alt="Digital Forge Logo" width={100} height={59} />
+          <Image priority src="/assets/logos/dflogo.svg" alt="Digital Forge Logo" width={100} height={59} />
         </NavLink>
       </div>
       <div className="w-full hidden lg:flex flex-row items-center justify-around">
