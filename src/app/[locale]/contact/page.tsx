@@ -13,7 +13,7 @@ export default function Contact({ params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
   const t = useTranslations();
   return (
-    <div className="w-full flex flex-row justify-around gap-5">
+    <div className="w-full flex flex-row justify-around gap-5 p-12">
       <form
         className="mx-auto flex w-[95%] max-w-[900px] flex-col items-center justify-center gap-2"
         action="https://formsubmit.co/form@digitalforge.be"

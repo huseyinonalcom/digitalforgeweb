@@ -15,7 +15,7 @@ export default function Home({ params: { locale } }: Props) {
   const t = useTranslations();
   const maxWidth = "max-w-[1400px]";
   return (
-    <div className="flex flex-col w-full gap-12 items-center bg-black">
+    <div className="flex flex-col w-full gap-12 items-center bg-black p-12">
       <div className={`w-full flex flex-row ${maxWidth} justify-around gap-5 bg-white p-4 rounded-md`}>
         <div className="flex flex-col gap-2 items-center justify-center">
           <h1 className="text-4xl font-bold">{t("intro-title")}</h1>
@@ -75,7 +75,7 @@ export default function Home({ params: { locale } }: Props) {
           <p className="text-justify font-bold">{t("why-us-5-text")}</p>
         </div>
       </div>
-      <AnimatedBackground backgroundColor="black" />
+      <AnimatedBackground />
     </div>
   );
 }

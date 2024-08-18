@@ -12,7 +12,7 @@ export default function Projects({ params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
   const t = useTranslations();
   return (
-    <div className="w-full flex flex-row justify-around gap-5">
+    <div className="w-full flex flex-row justify-around gap-5 p-12">
       <div className="flex flex-col gap-2 items-center justify-center">
         <h1 className="text-4xl font-bold">{t("intro-title")}</h1>
         <p className="text-lg text-center">{t("intro-text")}</p>

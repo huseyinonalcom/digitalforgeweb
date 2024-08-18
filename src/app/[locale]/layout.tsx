@@ -33,7 +33,7 @@ export default async function Layout({
       <body>
         <NextIntlClientProvider messages={messages}>
           <MainHeader />
-          <main className="h-[calc(100vh-67px)] bg-black overflow-y-auto flex flex-col items-center p-12">{children}</main>
+          <main className="h-[calc(100vh-67px)] overflow-y-auto flex flex-col items-center">{children}</main>
         </NextIntlClientProvider>
       </body>
     </html>

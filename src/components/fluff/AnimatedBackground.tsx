@@ -9,13 +9,7 @@ interface Star {
   color: [number, number, number];
 }
 
-interface Props {
-  speedFactor?: number;
-  backgroundColor?: string;
-  starCount?: number;
-}
-
-export default function AnimatedBackground({ speedFactor = 0.4, backgroundColor = "black", starCount = 10 }: Props) {
+export default function AnimatedBackground() {
   useEffect(() => {
     const canvas = document.getElementById("background") as HTMLCanvasElement;
 
@@ -65,10 +59,10 @@ export default function AnimatedBackground({ speedFactor = 0.4, backgroundColor 
       }));
     };
 
-    let stars = makeStars(starCount);
+    let stars = makeStars(15);
 
     const clearCanvas = () => {
-      context.fillStyle = backgroundColor;
+      context.fillStyle = "black";
       context.fillRect(0, 0, canvas.width, canvas.height);
     };
 
@@ -91,7 +85,7 @@ export default function AnimatedBackground({ speedFactor = 0.4, backgroundColor 
       const elapsed = time - prevTime;
       prevTime = time;
 
-      moveStars(elapsed * speedFactor);
+      moveStars(elapsed * 0.4);
       clearCanvas();
 
       const cx = w / 2;
@@ -103,7 +97,7 @@ export default function AnimatedBackground({ speedFactor = 0.4, backgroundColor 
 
         if (x >= 0 && x < w && y >= 0 && y < h) {
           const brightness = 1 - (star.z / 1000) ** 2;
-          const radius = 30; // Adjust this for larger or smaller circles
+          const radius = 30;
           drawCircle(x, y, radius, brightness, star.color);
         }
       });
@@ -121,7 +115,7 @@ export default function AnimatedBackground({ speedFactor = 0.4, backgroundColor 
     return () => {
       window.removeEventListener("resize", debouncedResize);
     };
-  }, [speedFactor, backgroundColor, starCount]);
+  }, []);
 
   return (
     <canvas
