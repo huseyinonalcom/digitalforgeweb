@@ -46,6 +46,7 @@ export default function AnimatedBackground() {
         [0, 255, 0], // Green
         [0, 0, 255], // Blue
         [255, 255, 0], // Yellow
+        [255, 255, 255], // Yellow
       ];
       return colors[Math.floor(Math.random() * colors.length)];
     };
