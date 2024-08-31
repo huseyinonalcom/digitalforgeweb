@@ -144,7 +144,7 @@ export default function Services({ params: { locale } }: Props) {
           <SubTitle text={t("service-16-subtitle-5")} />
           <Text text={t("service-16-subtext-5")} />
         </div>
-        <nav className="flex flex-col sticky top-10 gap-4 w-full max-w-[300px] items-end">
+        <nav className="flex flex-col sticky top-10 gap-4 text-right w-full max-w-[300px] items-end">
           {Array.from({ length: 16 }, (_, i) => (
             <a
               href={`#${t(`service-${i + 1}-title`)
