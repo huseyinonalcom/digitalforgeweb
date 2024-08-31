@@ -20,7 +20,7 @@ export default function Home({ params: { locale } }: Props) {
   const t = useTranslations();
 
   return (
-    <div className="flex flex-col w-full gap-12 items-center bg-black p-12">
+    <div className="flex flex-col w-full gap-12 items-center -z-20 bg-black p-12">
       <CardDiv>
         <div className="flex flex-col-reverse lg:flex-row justify-around gap-5">
           <div className="flex flex-col gap-2 items-center justify-center">

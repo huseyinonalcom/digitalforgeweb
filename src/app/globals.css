@@ -8,6 +8,10 @@
   }
 }
 
+main {
+  scroll-behavior: smooth;
+}
+
 * {
   scrollbar-width: 9px;
   scrollbar-color: white black;
@@ -39,4 +43,20 @@ a {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+}
+
+.nav-link:hover {
+  color: blue;
+}
+
+:target {
+  color: blue;
+  font-weight: bold;
+  font-size: xx-large;
 }
