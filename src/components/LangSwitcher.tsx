@@ -20,7 +20,7 @@ const LanguageSwitcher = () => {
   ];
 
   function changeLocale(locale: "en" | "tr" | "nl" | "fr") {
-    let newParams = params;
+    const newParams = params;
     delete newParams.locale;
     startTransition(() => {
       router.replace(

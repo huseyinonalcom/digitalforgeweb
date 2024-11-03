@@ -7,10 +7,10 @@ import { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
-  params: any;
+  params: Promise<{ locale: string }>;
 };
 
-export async function generateMetadata({ params }: Omit<Props, "children">) {
+export async function generateMetadata() {
   return {
     title: "DigitalForge",
     description: "Digital Forge: International Digital Marketing and Development Agency",
@@ -21,8 +21,9 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export default async function LocaleLayout({ children, params }: Props) {
-  if (!routing.locales.includes(params.locale as any)) {
+export default async function LocaleLayout(props: Props) {
+  const params = await props.params;
+  if (!routing.locales.includes(params.locale as "tr" | "en" | "fr" | "nl")) {
     notFound();
   }
   setRequestLocale(params.locale);
@@ -43,7 +44,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body>
         <NextIntlClientProvider messages={messages}>
           <MainHeader />
-          <main className="h-[calc(100vh-80px)] overflow-y-auto flex flex-col items-center">{children}</main>
+          <main className="h-[calc(100vh-80px)] overflow-y-auto flex flex-col items-center">{props.children}</main>
         </NextIntlClientProvider>
       </body>
     </html>

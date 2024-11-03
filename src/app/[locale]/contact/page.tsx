@@ -1,13 +1,8 @@
-import { use } from "react";
 import { ButtonColorOut } from "@/components/ButtonColorOut";
 import { OutlinedInput } from "@/components/input/OutlinedInput";
 import { useTranslations } from "next-intl";
 
-type Props = {
-  params: Promise<{ locale: string }>;
-};
-
-export default function Contact(props: Props) {
+export default function Contact() {
   const t = useTranslations();
 
   return (

@@ -60,7 +60,7 @@ export default function AnimatedBackground() {
       }));
     };
 
-    let stars = makeStars(25);
+    const stars = makeStars(25);
 
     const clearCanvas = () => {
       context.fillStyle = "black";

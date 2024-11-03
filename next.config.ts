@@ -3,8 +3,6 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin();
 
-const nextConfig: NextConfig = withNextIntl({
-  /* config options here */
-});
+const nextConfig: NextConfig = withNextIntl({});
 
 export default nextConfig;

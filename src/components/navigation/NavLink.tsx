@@ -8,7 +8,7 @@ interface NavLinkProps extends LinkProps {
 
 export const NavLink = ({ children, href, ...props }: NavLinkProps) => {
   return (
-    // @ts-ignore
+    // @ts-expect-error idk man
     <Link href={href} className={`no-underline duration-300 text-black hover:text-blue-500`} {...props}>
       {children}
     </Link>
