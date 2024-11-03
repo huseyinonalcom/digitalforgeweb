@@ -1,24 +1,10 @@
-import { use } from "react";
 import { ButtonColorOut } from "@/components/ButtonColorOut";
 import { NavLink } from "@/components/navigation/NavLink";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { setRequestLocale } from "next-intl/server";
 
-type Props = {
-  params: Promise<{ locale: string }>;
-};
-
-export default function About(props: Props) {
-  const params = use(props.params);
-
-  const {
-    locale
-  } = params;
-
+export default function About() {
   const t = useTranslations();
-  setRequestLocale(locale);
-
 
   return (
     <div className="w-full flex flex-row justify-around gap-5 p-12">
@@ -35,7 +21,7 @@ export default function About(props: Props) {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center">
-        <Image src="/assets/logos/dflogo.svg" alt="Digital Forge Logo" width={400} height={400} />
+        <Image src="/assets/logos/dflogo.svg" alt="Digital Forge Logo" width={400} height={90} />
       </div>
     </div>
   );
