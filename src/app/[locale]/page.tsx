@@ -17,7 +17,7 @@ export default function Home({ params: { locale } }: Props) {
   return (
     <div className="flex flex-col w-full items-center bg-black">
       <AnimatedBackground />
-      <BoxDiv className="bg-white/90 min-h-[50vh]">
+      <BoxDiv className="bg-white/90 min-h-[60vh]">
         <div className="flex flex-col-reverse lg:flex-row justify-around gap-5 h-full">
           <div className="flex flex-col gap-2 items-center justify-center">
             <h1 className="text-4xl font-bold">{t("intro-title")}</h1>
