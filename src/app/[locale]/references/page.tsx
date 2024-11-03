@@ -1,3 +1,4 @@
+import { use } from "react";
 import { ButtonColorOut } from "@/components/ButtonColorOut";
 import { NavLink } from "@/components/navigation/NavLink";
 import { useTranslations } from "next-intl";
@@ -5,10 +6,16 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
-export default function References({ params: { locale } }: Props) {
+export default function References(props: Props) {
+  const params = use(props.params);
+
+  const {
+    locale
+  } = params;
+
   const t = useTranslations();
 
   return (

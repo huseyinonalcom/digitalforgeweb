@@ -1,16 +1,24 @@
+import { use } from "react";
 import { ButtonColorOut } from "@/components/ButtonColorOut";
 import { NavLink } from "@/components/navigation/NavLink";
 import { useTranslations } from "next-intl";
-
 import Image from "next/image";
+import { setRequestLocale } from "next-intl/server";
 
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
-export default function About({ params: { locale } }: Props) {
+export default function About(props: Props) {
+  const params = use(props.params);
+
+  const {
+    locale
+  } = params;
+
   const t = useTranslations();
- 
+  setRequestLocale(locale);
+
 
   return (
     <div className="w-full flex flex-row justify-around gap-5 p-12">

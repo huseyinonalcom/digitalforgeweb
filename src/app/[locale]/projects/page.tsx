@@ -1,3 +1,4 @@
+import { use } from "react";
 import { ButtonColorOut } from "@/components/ButtonColorOut";
 import { NavLink } from "@/components/navigation/NavLink";
 import { useTranslations } from "next-intl";
@@ -6,13 +7,18 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
-export default function Projects({ params: { locale } }: Props) {
-  
-    const t = useTranslations();
- 
+export default function Projects(props: Props) {
+  const params = use(props.params);
+
+  const {
+    locale
+  } = params;
+
+  const t = useTranslations();
+
   return (
     <div className="w-full flex flex-row justify-around gap-5 p-12">
       <div className="flex flex-col gap-2 items-center justify-center">

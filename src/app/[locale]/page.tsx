@@ -1,18 +1,22 @@
+import { use } from "react";
 import { ButtonColorOut } from "@/components/ButtonColorOut";
 import { BoxDiv } from "@/components/containers/box-div";
 import AnimatedBackground from "@/components/fluff/AnimatedBackground";
 import { NavLink } from "@/components/navigation/NavLink";
 import { useTranslations } from "next-intl";
-
 import Image from "next/image";
 import { FaChartLine, FaCode, FaPaintBrush } from "react-icons/fa";
+import { setRequestLocale } from "next-intl/server";
 
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
-export default function Home({ params: { locale } }: Props) {
+export default function Home(props: Props) {
+  const params = use(props.params);
+  const { locale } = params;
   const t = useTranslations();
+  setRequestLocale(locale);
 
   return (
     <div className="flex flex-col w-full items-center bg-black">

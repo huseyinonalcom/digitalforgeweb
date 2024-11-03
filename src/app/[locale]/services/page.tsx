@@ -1,14 +1,15 @@
+import { use } from "react";
 import { useTranslations } from "next-intl";
 
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 const Title = ({ text }: { text: string }) => {
   return (
-    <h2 className="text-2xl font-semibold pt-4" id={text.replace(/\s+/g, "-").toLowerCase()}>
+    (<h2 className="text-2xl font-semibold pt-4" id={text.replace(/\s+/g, "-").toLowerCase()}>
       {text}
-    </h2>
+    </h2>)
   );
 };
 
@@ -19,10 +20,16 @@ const Text = ({ text }: { text: string }) => {
   return <p className="pl-8 text-justify font-medium">{text}</p>;
 };
 
-export default function Services({ params: { locale } }: Props) {
+export default function Services(props: Props) {
+  const params = use(props.params);
+
+  const {
+    locale
+  } = params;
+
   const t = useTranslations();
   return (
-    <div className="flex flex-col w-full items-center p-8">
+    (<div className="flex flex-col w-full items-center p-8">
       <h1 className="text-5xl font-bold mx-auto">{t("services-title")}</h1>
       <div className="flex flex-row w-full max-w-[1500px] items-start justify-between">
         <div className="flex flex-col w-full max-w-[1000px] gap-6 items-start justify-center">
@@ -156,6 +163,6 @@ export default function Services({ params: { locale } }: Props) {
           ))}
         </nav>
       </div>
-    </div>
+    </div>)
   );
 }

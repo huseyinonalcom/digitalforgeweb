@@ -1,29 +1,34 @@
-import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { MainHeader } from "@/components/MainHeader";
+import { ReactNode } from "react";
 
-export const metadata: Metadata = {
-  title: "DigitalForge",
-  description: "Digital Forge: International Digital Marketing and Development Agency",
+type Props = {
+  children: ReactNode;
+  params: any;
 };
 
-export default async function Layout({
-  children,
-  params: { locale },
-}: Readonly<{
-  children: React.ReactNode;
-  params: { locale: string };
-}>) {
-  if (!routing.locales.includes(locale as any)) {
+export async function generateMetadata({ params }: Omit<Props, "children">) {
+  return {
+    title: "DigitalForge",
+    description: "Digital Forge: International Digital Marketing and Development Agency",
+  };
+}
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function LocaleLayout({ children, params }: Props) {
+  if (!routing.locales.includes(params.locale as any)) {
     notFound();
   }
+  setRequestLocale(params.locale);
   const messages = await getMessages(); // Enable static rendering
-  setRequestLocale(locale);
   return (
-    <html lang={locale}>
+    <html lang={params.locale}>
       <head>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
