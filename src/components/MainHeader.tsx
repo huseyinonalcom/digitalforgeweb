@@ -47,7 +47,7 @@ export const MainHeader = () => {
         <LanguageSwitcher />
       </div>
       <button className="group relative lg:hidden">
-        <GiHamburgerMenu size={32} />
+        <GiHamburgerMenu size={32} name="open nav menu" />
         <div className="hidden group-hover:flex flex-col gap-2 absolute left-0 w-full bg-gray-300 p-4">
           {links1.map((link1) => (
             <Fragment key={link1.href}>{link(link1.href, link1.text)}</Fragment>
