@@ -1,5 +1,5 @@
-import { useTranslations } from "next-intl";
-import Link, { LinkProps } from "next/link";
+import { Link } from "@/i18n/routing";
+import { LinkProps } from "next/link";
 
 interface NavLinkProps extends LinkProps {
   children: React.ReactNode;
@@ -7,15 +7,8 @@ interface NavLinkProps extends LinkProps {
 }
 
 export const NavLink = ({ children, href, ...props }: NavLinkProps) => {
-  const t = useTranslations();
-  if (!href.startsWith("/")) {
-    href = "/" + href;
-  }
-  if (!href.startsWith("/" + t("locale"))) {
-    href = "/" + t("locale") + href;
-  }
-
   return (
+    // @ts-ignore
     <Link href={href} className={`no-underline duration-300 text-black hover:text-blue-500`} {...props}>
       {children}
     </Link>

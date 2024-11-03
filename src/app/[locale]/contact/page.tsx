@@ -2,7 +2,9 @@ import { ButtonColorOut } from "@/components/ButtonColorOut";
 import { OutlinedInput } from "@/components/input/OutlinedInput";
 import { NavLink } from "@/components/navigation/NavLink";
 import { useTranslations } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+
+
+
 import Image from "next/image";
 
 type Props = {
@@ -10,8 +12,8 @@ type Props = {
 };
 
 export default function Contact({ params: { locale } }: Props) {
-  unstable_setRequestLocale(locale);
   const t = useTranslations();
+ 
   return (
     <div className="w-full flex flex-row justify-around gap-5 p-12">
       <form

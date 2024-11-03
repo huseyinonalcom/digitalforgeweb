@@ -1,7 +1,8 @@
 import { ButtonColorOut } from "@/components/ButtonColorOut";
 import { NavLink } from "@/components/navigation/NavLink";
 import { useTranslations } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+
+
 import Image from "next/image";
 
 type Props = {
@@ -9,8 +10,9 @@ type Props = {
 };
 
 export default function Projects({ params: { locale } }: Props) {
-  unstable_setRequestLocale(locale);
-  const t = useTranslations();
+  
+    const t = useTranslations();
+ 
   return (
     <div className="w-full flex flex-row justify-around gap-5 p-12">
       <div className="flex flex-col gap-2 items-center justify-center">

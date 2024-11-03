@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { MainHeader } from "@/components/MainHeader";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, unstable_setRequestLocale } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
+import { notFound } from "next/navigation";
+import { MainHeader } from "@/components/MainHeader";
 
 export const metadata: Metadata = {
   title: "DigitalForge",
@@ -15,8 +17,11 @@ export default async function Layout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
-  unstable_setRequestLocale(locale);
-  const messages = await getMessages();
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+  const messages = await getMessages(); // Enable static rendering
+  setRequestLocale(locale);
   return (
     <html lang={locale}>
       <head>
@@ -33,7 +38,7 @@ export default async function Layout({
       <body>
         <NextIntlClientProvider messages={messages}>
           <MainHeader />
-          <main className="h-[calc(100vh-67px)] overflow-y-auto flex flex-col items-center">{children}</main>
+          <main className="h-[calc(100vh-80px)] overflow-y-auto flex flex-col items-center">{children}</main>
         </NextIntlClientProvider>
       </body>
     </html>

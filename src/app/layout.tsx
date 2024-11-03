@@ -1,13 +1,13 @@
 import { ReactNode } from "react";
 import "./globals.css";
-import { locales } from "@/config";
+import { routing } from "@/i18n/routing";
 
 type Props = {
   children: ReactNode;
 };
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export default function RootLayout({ children }: Props) {

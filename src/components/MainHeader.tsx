@@ -6,7 +6,8 @@ import { useTranslations } from "next-intl";
 import LanguageSwitcher from "./LangSwitcher";
 
 export const MainHeader = () => {
-  const t = useTranslations();
+    const t = useTranslations();
+ 
   const links1 = [
     { href: "hotpress", text: t("hot-press") },
     { href: "projects", text: t("projects") },
@@ -27,7 +28,7 @@ export const MainHeader = () => {
   };
 
   return (
-    <header className="shadow px-6 py-1 w-full items-center z-50 sticky top-0 bg-white flex flex-row justify-around lg:grid grid-cols-3">
+    <header className="shadow px-6 py-1 min-h-20 w-full items-center z-50 sticky top-0 bg-white flex flex-row justify-around lg:grid grid-cols-3">
       <div className="w-full hidden lg:flex flex-row items-center justify-around">
         {links1.map((link1) => (
           <Fragment key={link1.href}>{link(link1.href, link1.text)}</Fragment>
@@ -35,7 +36,7 @@ export const MainHeader = () => {
       </div>
       <div className="lg:w-full flex flex-row items-center justify-center">
         <NavLink href={`/`}>
-          <Image priority src="/assets/logos/dflogo.svg" alt="Digital Forge Logo" width={100} height={59} />
+          <Image priority src="/assets/logos/dflogo.svg" alt="Digital Forge Logo" width={266} height={60} />
         </NavLink>
       </div>
       <div className="w-full hidden lg:flex flex-row items-center justify-around">

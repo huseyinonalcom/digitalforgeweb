@@ -1,28 +1,24 @@
 import { ButtonColorOut } from "@/components/ButtonColorOut";
+import { BoxDiv } from "@/components/containers/box-div";
 import AnimatedBackground from "@/components/fluff/AnimatedBackground";
 import { NavLink } from "@/components/navigation/NavLink";
 import { useTranslations } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+
 import Image from "next/image";
-import { ReactNode } from "react";
 import { FaChartLine, FaCode, FaPaintBrush } from "react-icons/fa";
 
 type Props = {
   params: { locale: string };
 };
 
-const CardDiv = ({ children }: { children: ReactNode }) => {
-  return <div className="w-full max-w-[1400px] bg-white/90 backdrop-blur-md p-4 rounded-md">{children}</div>;
-};
-
 export default function Home({ params: { locale } }: Props) {
-  unstable_setRequestLocale(locale);
   const t = useTranslations();
 
   return (
-    <div className="flex flex-col w-full gap-12 items-center -z-20 bg-black p-12">
-      <CardDiv>
-        <div className="flex flex-col-reverse lg:flex-row justify-around gap-5">
+    <div className="flex flex-col w-full items-center bg-black">
+      <AnimatedBackground />
+      <BoxDiv className="bg-white/90 min-h-[50vh]">
+        <div className="flex flex-col-reverse lg:flex-row justify-around gap-5 h-full">
           <div className="flex flex-col gap-2 items-center justify-center">
             <h1 className="text-4xl font-bold">{t("intro-title")}</h1>
             <p className="text-lg text-center">{t("intro-text")}</p>
@@ -39,14 +35,14 @@ export default function Home({ params: { locale } }: Props) {
             <Image src="/assets/logos/dflogo.svg" alt="Digital Forge Logo" width={400} height={400} />
           </div>
         </div>
-      </CardDiv>
-      <CardDiv>
+      </BoxDiv>
+      <BoxDiv className="bg-blue-200/90">
         <div className="flex flex-col gap-2 items-center justify-center">
           <h1 className="text-4xl font-bold">{t("who-are-we-title")}</h1>
           <p className="text-lg text-center">{t("who-are-we-text")}</p>
         </div>
-      </CardDiv>
-      <CardDiv>
+      </BoxDiv>
+      <BoxDiv className="bg-red-200/90">
         <div className="flex flex-col gap-6 items-center justify-center">
           <h1 className="text-4xl font-bold">{t("services-title")}</h1>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 w-full">
@@ -67,8 +63,8 @@ export default function Home({ params: { locale } }: Props) {
             </div>
           </div>
         </div>
-      </CardDiv>
-      <CardDiv>
+      </BoxDiv>
+      <BoxDiv className="bg-green-200/90">
         <div className="flex flex-col gap-6 items-center justify-center">
           <h1 className="text-4xl font-bold">{t("why-us-title")}</h1>
           <div className="flex flex-col gap-2 items-start justify-center">
@@ -83,8 +79,7 @@ export default function Home({ params: { locale } }: Props) {
             <p className="text-justify font-bold">{t("why-us-5-text")}</p>
           </div>
         </div>
-      </CardDiv>
-      <AnimatedBackground />
+      </BoxDiv>
     </div>
   );
 }
