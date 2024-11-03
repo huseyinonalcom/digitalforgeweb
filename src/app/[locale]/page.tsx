@@ -5,6 +5,7 @@ import { NavLink } from "@/components/navigation/NavLink";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { FaChartLine, FaCode, FaPaintBrush } from "react-icons/fa";
+import dflogo from "../../../public/assets/logos/dflogo.svg";
 
 export default function Home() {
   const t = useTranslations();
@@ -27,7 +28,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <Image src="/assets/logos/dflogo.svg" alt="Digital Forge Logo" width={400} height={90} />
+            <Image priority src={dflogo} alt="Digital Forge Logo" />
           </div>
         </div>
       </BoxDiv>

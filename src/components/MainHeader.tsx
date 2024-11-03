@@ -4,10 +4,11 @@ import { Fragment } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useTranslations } from "next-intl";
 import LanguageSwitcher from "./LangSwitcher";
+import dflogo from "../../public/assets/logos/dflogo.svg";
 
 export const MainHeader = () => {
-    const t = useTranslations();
- 
+  const t = useTranslations();
+
   const links1 = [
     { href: "hotpress", text: t("hot-press") },
     { href: "projects", text: t("projects") },
@@ -36,7 +37,7 @@ export const MainHeader = () => {
       </div>
       <div className="lg:w-full flex flex-row items-center justify-center">
         <NavLink href={`/`}>
-          <Image priority src="/assets/logos/dflogo.svg" alt="Digital Forge Logo" width={266} height={60} />
+          <Image priority src={dflogo} alt="Digital Forge Logo" className="h-12" />
         </NavLink>
       </div>
       <div className="w-full hidden lg:flex flex-row items-center justify-around">
