@@ -130,7 +130,7 @@ export default function AnimatedBackground() {
         bottom: 0,
         left: 0,
         zIndex: 10,
-        opacity: 1,
+        opacity: 0.7,
         pointerEvents: "none",
         mixBlendMode: "screen",
       }}
