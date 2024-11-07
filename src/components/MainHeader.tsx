@@ -34,9 +34,9 @@ export const MainHeader = () => {
           <HeaderLink key={link1.href} href={link1.href} text={link1.text} />
         ))}
       </div>
-      <div className="lg:w-full flex flex-row items-center justify-center">
+      <div className="w-full flex flex-row items-center justify-start lg:justify-center">
         <NavLink href={`/`}>
-          <Image priority src={dflogo} alt="Digital Forge Logo" className="h-12" />
+          <Image priority src={dflogo} alt="Digital Forge Logo" className="w-48" />
         </NavLink>
       </div>
       <div className="w-full hidden lg:flex flex-row items-center justify-around">

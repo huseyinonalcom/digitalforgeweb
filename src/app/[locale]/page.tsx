@@ -15,8 +15,8 @@ export default function Home() {
       <AnimatedBackground />
       <BoxDiv className="bg-white/90 min-h-[60vh]">
         <div className="flex flex-col-reverse lg:flex-row justify-around gap-5 h-full">
-          <div className="flex flex-col gap-2 items-center justify-center">
-            <h1 className="text-4xl font-bold">{t("intro-title")}</h1>
+          <div className="flex flex-col gap-2 items-center justify-center w-full">
+            <h2 className="text-xl font-bold w-full text-center">{t("intro-title")}</h2>
             <p className="text-lg text-center">{t("intro-text")}</p>
             <div className="flex flex-row gap-4">
               <NavLink href="projects">
