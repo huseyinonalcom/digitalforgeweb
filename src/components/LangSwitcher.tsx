@@ -40,7 +40,7 @@ const LanguageSwitcher = () => {
   }
 
   return (
-    <div className="group relative hidden text-black lg:flex">
+    <div className="group relative text-black">
       <Image src={flags.find((flg) => flg.code == currentLocale)!.image} alt={t("locale")} height={50} width={50} />
       <div className="hidden group-hover:flex flex-col gap-4 absolute items-center py-3 -top-3 -right-[50%] w-[96px] bg-gray-300">
         {flags
