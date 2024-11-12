@@ -122,13 +122,12 @@ export default function AnimatedBackground() {
     <canvas
       id="background"
       style={{
-        backgroundColor: "#1f1f1f",
         padding: 0,
         margin: 0,
         position: "fixed",
         bottom: 0,
         left: 0,
-        zIndex: -10,
+        zIndex: 0,
         opacity: 0.5,
         pointerEvents: "none",
         mixBlendMode: "screen",
