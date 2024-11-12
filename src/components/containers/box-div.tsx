@@ -4,7 +4,7 @@ type BoxDivProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElem
 
 export const BoxDiv = ({ children, className, ...rest }: BoxDivProps) => {
   return (
-    <div className={`w-full backdrop-blur-md px-4 py-16 ${className}`} {...rest}>
+    <div className={`w-full backdrop-blur-md px-4 py-12 ${className}`} {...rest}>
       {children}
     </div>
   );
