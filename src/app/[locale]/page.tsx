@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { FaChartLine, FaCode, FaPaintBrush } from "react-icons/fa";
 import dflogo from "../../../public/assets/logos/dflogo.svg";
-import banner from "../../../public/assets/images/digital2024.jpg";
+import banner from "../../../public/assets/images/digitalbanner.jpg";
 import Contact from "./contact/page";
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full items-center">
       <AnimatedBackground />
-      <BoxDiv className="bg-slate-400/60 min-h-[60vh] relative">
+      <BoxDiv className="min-h-[60vh] relative">
         <div className="text-white flex flex-col-reverse lg:flex-row justify-around gap-5 h-full max-w-[1500px] mx-auto">
           <div className="flex flex-col gap-2 items-center justify-center">
             <h2 className="text-xl lg:text-3xl font-bold w-full text-center">{t("intro-title")}</h2>
