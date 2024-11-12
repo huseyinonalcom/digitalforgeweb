@@ -39,21 +39,21 @@ export default function Home() {
           <h1 className="text-4xl font-bold">{t("who-are-we-title")}</h1>
           <p className="text-lg text-center">{t("who-are-we-text")}</p>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 w-full">
-            <div className="flex flex-col gap-2 items-start rounded-md text-white p-4 bg-black">
+            <div className="flex flex-col gap-2 items-start rounded-md text-white p-4 bg-[#1f1f1f]">
               <div className="flex flex-row items-center justify-between w-full">
                 <h1 className="text-3xl font-bold">{t("services-1-title")}</h1>
                 <FaChartLine color="yellow" size={64} />
               </div>
               <p className="text-justify">{t("services-1-text")}</p>
             </div>
-            <div className="flex flex-col gap-2 items-start rounded-md text-white p-4 bg-black">
+            <div className="flex flex-col gap-2 items-start rounded-md text-white p-4 bg-[#1f1f1f]">
               <div className="flex flex-row items-center justify-between w-full">
                 <h1 className="text-3xl font-bold">{t("services-2-title")}</h1>
                 <FaPaintBrush color="red" size={64} />
               </div>
               <p className="text-justify">{t("services-2-text")}</p>
             </div>
-            <div className="flex flex-col gap-2 items-start rounded-md text-white p-4 bg-black">
+            <div className="flex flex-col gap-2 items-start rounded-md text-white p-4 bg-[#1f1f1f]">
               <div className="flex flex-row items-center justify-between w-full">
                 <h1 className="text-3xl font-bold">{t("services-3-title")}</h1>
                 <FaCode color="#1fa800" size={64} />
