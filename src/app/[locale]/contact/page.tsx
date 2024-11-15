@@ -1,14 +1,14 @@
 import { ButtonColorOut } from "@/components/ButtonColorOut";
 import { OutlinedInput } from "@/components/input/OutlinedInput";
 import { useTranslations } from "next-intl";
-
+ 
 export default function Contact() {
   const t = useTranslations();
 
   return (
     <div className="w-full flex flex-row justify-around gap-5 p-12">
       <form
-        className="mx-auto flex w-[95%] max-w-[900px] flex-col items-center justify-center gap-2"
+        className="mx-auto flex w-full max-w-[1000px] flex-col items-center justify-center gap-2"
         action="https://formsubmit.co/info@digitalforge.be"
         encType="multipart/form-data"
         method="POST"

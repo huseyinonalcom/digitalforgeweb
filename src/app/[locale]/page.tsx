@@ -35,30 +35,34 @@ export default function Home() {
         </div>
       </BoxDiv>
       <BoxDiv className="bg-white">
-        <div className="flex flex-col gap-6 items-center justify-center max-w-[1500px] mx-auto">
-          <h1 className="text-4xl font-bold">{t("who-are-we-title")}</h1>
+        <div className="flex flex-col gap-6 items-center justify-center max-w-[1200px] mx-auto">
+          <h1 className="text-4xl font-bold mx-auto">{t("who-are-we-title")}</h1>
           <p className="text-lg text-center">{t("who-are-we-text")}</p>
+        </div>
+      </BoxDiv>
+      <BoxDiv>
+        <div className="flex flex-col gap-6 items-center text-white justify-center max-w-[1500px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 w-full">
-            <div className="flex flex-col gap-2 items-start rounded-md text-white p-4 bg-[#1f1f1f]">
+            <div className="flex flex-col gap-2 items-start rounded-md text-white p-4">
               <div className="flex flex-row items-center justify-between w-full">
                 <h1 className="text-3xl font-bold">{t("services-1-title")}</h1>
                 <FaChartLine color="yellow" size={64} />
               </div>
-              <p className="text-justify">{t("services-1-text")}</p>
+              <p>{t("services-1-text")}</p>
             </div>
-            <div className="flex flex-col gap-2 items-start rounded-md text-white p-4 bg-[#1f1f1f]">
+            <div className="flex flex-col gap-2 items-start rounded-md text-white p-4">
               <div className="flex flex-row items-center justify-between w-full">
                 <h1 className="text-3xl font-bold">{t("services-2-title")}</h1>
                 <FaPaintBrush color="red" size={64} />
               </div>
-              <p className="text-justify">{t("services-2-text")}</p>
+              <p>{t("services-2-text")}</p>
             </div>
-            <div className="flex flex-col gap-2 items-start rounded-md text-white p-4 bg-[#1f1f1f]">
+            <div className="flex flex-col gap-2 items-start rounded-md text-white p-4">
               <div className="flex flex-row items-center justify-between w-full">
                 <h1 className="text-3xl font-bold">{t("services-3-title")}</h1>
                 <FaCode color="#1fa800" size={64} />
               </div>
-              <p className="text-justify">{t("services-3-text")}</p>
+              <p>{t("services-3-text")}</p>
             </div>
           </div>
         </div>
@@ -75,32 +79,36 @@ export default function Home() {
         />
       </BoxDiv>
       <BoxDiv className="bg-white">
-        <div className="flex flex-col gap-6 items-center justify-center max-w-[1500px] mx-auto">
-          <h1 className="text-4xl font-bold">{t("why-us-title")}</h1>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 w-full">
-            <div className="flex flex-col gap-2 items-start rounded-md p-4 border-8 border-[#321b7a] min-h-52">
+        <div className="grid max-w-[1500px] grid-cols-1 lg:grid-cols-3 mx-auto">
+          <div className="col-span-1">
+            <h1 className="text-5xl font-black ml-auto">{t("why-us-title")}</h1>
+          </div>
+          <div className="col-span-2">
+            <div className="flex flex-col gap-2 items-start rounded-md p-4 min-h-36">
               <div className="flex flex-row items-center justify-between w-full">
-                <h1 className="text-lg font-bold">{t("why-us-1-title")}</h1>
+                <h1 className="text-2xl font-black">{t("why-us-4-title")}</h1>
               </div>
-              <p className="text-justify">{t("why-us-1-text")}</p>
+              <p>{t("why-us-4-text")}</p>
             </div>
-            <div className="flex flex-col gap-2 items-start rounded-md p-4 border-8 border-[#321b7a] min-h-52">
-              <div className="flex flex-row items-center justify-between w-full">
-                <h1 className="text-lg font-bold">{t("why-us-2-title")}</h1>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 w-full">
+              <div className="flex flex-col gap-2 items-start rounded-md p-4 min-h-36">
+                <div className="flex flex-row items-center justify-between w-full">
+                  <h1 className="text-lg font-bold">{t("why-us-1-title")}</h1>
+                </div>
+                <p>{t("why-us-1-text")}</p>
               </div>
-              <p className="text-justify">{t("why-us-2-text")}</p>
-            </div>
-            <div className="flex flex-col gap-2 items-start rounded-md p-4 border-8 border-[#321b7a] min-h-52">
-              <div className="flex flex-row items-center justify-between w-full">
-                <h1 className="text-lg font-bold">{t("why-us-3-title")}</h1>
+              <div className="flex flex-col gap-2 items-start rounded-md p-4 min-h-36">
+                <div className="flex flex-row items-center justify-between w-full">
+                  <h1 className="text-lg font-bold">{t("why-us-2-title")}</h1>
+                </div>
+                <p>{t("why-us-2-text")}</p>
               </div>
-              <p className="text-justify">{t("why-us-3-text")}</p>
-            </div>
-            <div className="flex flex-col gap-2 items-start rounded-md p-4 border-8 border-[#321b7a]  min-h-52">
-              <div className="flex flex-row items-center justify-between w-full">
-                <h1 className="text-lg font-bold">{t("why-us-4-title")}</h1>
+              <div className="flex flex-col gap-2 items-start rounded-md p-4 min-h-36">
+                <div className="flex flex-row items-center justify-between w-full">
+                  <h1 className="text-lg font-bold">{t("why-us-3-title")}</h1>
+                </div>
+                <p>{t("why-us-3-text")}</p>
               </div>
-              <p className="text-justify">{t("why-us-4-text")}</p>
             </div>
           </div>
         </div>
