@@ -67,7 +67,7 @@ export default function Home() {
           </div>
         </div>
       </BoxDiv>
-      <BoxDiv className="relative h-[200px] lg:h-[500px]">
+      <BoxDiv className="relative aspect-[900/239] w-full">
         <Image
           src={banner}
           className="absolute"
