@@ -67,16 +67,10 @@ export default function Home() {
           </div>
         </div>
       </BoxDiv>
-      <BoxDiv className="relative hidden lg:flex aspect-[900/239] w-full">
-        <Image
-          src={banner}
-          className="absolute"
-          fill
-          style={{
-            objectFit: "cover",
-          }}
-          alt={"background"}
-        />
+      <BoxDiv className="bg-white">
+        <div className="flex flex-col gap-6 items-center justify-center max-w-[1500px] mx-auto">
+          <h1 className="text-4xl font-bold">{t("our-partners")}</h1>
+        </div>
       </BoxDiv>
       <BoxDiv className="bg-white">
         <div className="grid max-w-[1500px] grid-cols-1 lg:grid-cols-3 mx-auto">
@@ -113,10 +107,16 @@ export default function Home() {
           </div>
         </div>
       </BoxDiv>
-      <BoxDiv className="bg-white">
-        <div className="flex flex-col gap-6 items-center justify-center max-w-[1500px] mx-auto">
-          <h1 className="text-4xl font-bold">{t("our-partners")}</h1>
-        </div>
+      <BoxDiv className="relative hidden lg:flex aspect-[900/239] w-full">
+        <Image
+          src={banner}
+          className="absolute"
+          fill
+          style={{
+            objectFit: "cover",
+          }}
+          alt={"background"}
+        />
       </BoxDiv>
       <BoxDiv className="bg-white">
         <Contact />
