@@ -26,7 +26,7 @@ const InfiniteCarousel = () => {
       if (window.innerWidth < 700) {
         setSpeed(0.4);
       } else {
-        setSpeed(0.8);
+        setSpeed(0.6);
       }
     };
 
