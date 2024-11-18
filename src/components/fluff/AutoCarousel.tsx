@@ -39,7 +39,7 @@ const InfiniteCarousel = () => {
         const newPosition = prev - speed;
 
         if (newPosition % 33.333 === 0) {
-          setImages((currentImages) => [...currentImages, ...baseImages]);
+          setImages((currentImages) => [...currentImages, ...baseImages, ...baseImages]);
         }
 
         return newPosition;
