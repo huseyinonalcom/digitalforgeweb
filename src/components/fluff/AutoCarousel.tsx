@@ -24,16 +24,14 @@ const InfiniteCarousel = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 700) {
-        setSpeed(1); // Faster speed for small screens
+        setSpeed(0.4);
       } else {
-        setSpeed(0.5); // Normal speed for larger screens
+        setSpeed(.8);
       }
     };
 
-    // Initial check
     handleResize();
 
-    // Add resize listener
     window.addEventListener("resize", handleResize);
 
     const animation = setInterval(() => {
@@ -46,16 +44,24 @@ const InfiniteCarousel = () => {
 
         return newPosition;
       });
-    }, 30);
+    }, 90);
 
     return () => {
       clearInterval(animation);
       window.removeEventListener("resize", handleResize);
     };
-  }, [speed]); // Added speed to dependency array
+  }, [speed]);
 
   return (
-    <div ref={containerRef} className="overflow-hidden relative w-full h-32 lg:h-[200px]">
+    <div
+      ref={containerRef}
+      style={{
+        overflow: "hidden",
+        position: "relative",
+        width: "100%",
+        height: "200px",
+      }}
+    >
       <div
         style={{
           display: "flex",
@@ -69,7 +75,7 @@ const InfiniteCarousel = () => {
             key={`${index}-${position}`}
             style={{
               flex: "0 0 33.333%",
-              height: "100%",
+              height: "200px",
               padding: "1rem",
               display: "flex",
               justifyContent: "center",
