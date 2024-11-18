@@ -1,5 +1,5 @@
 import AnimatedBackground from "@/components/fluff/AnimatedBackground";
-import { FaChartLine, FaCode, FaPaintBrush, FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
+import { FaChartLine, FaCode, FaPaintBrush, FaWhatsapp } from "react-icons/fa";
 import { ButtonColorOut } from "@/components/ButtonColorOut";
 import dflogo from "../../../public/assets/logos/dflogo.svg";
 import { NavLink } from "@/components/navigation/NavLink";
@@ -8,13 +8,6 @@ import { useTranslations } from "next-intl";
 import Contact from "./contact/page";
 import Image from "next/image";
 import InfiniteCarousel from "@/components/fluff/AutoCarousel";
-import { BsWhatsapp } from "react-icons/bs";
-import { GrWhatsapp } from "react-icons/gr";
-import { ImWhatsapp } from "react-icons/im";
-import { PiWhatsappLogo, PiWhatsappLogoDuotone } from "react-icons/pi";
-import { TbBrandWhatsapp } from "react-icons/tb";
-import { FiMail } from "react-icons/fi";
-import { MdMailLock } from "react-icons/md";
 import { BiMailSend } from "react-icons/bi";
 
 export default function Home() {
