@@ -112,13 +112,13 @@ export default function Home() {
       <BoxDiv className="relative w-full">
         <div className="flex flex-col lg:flex-row gap-6 justify-between items-center max-w-[1200px] mx-auto">
           <a href="https://api.whatsapp.com/send?phone=32494550687" target="_blank" rel="noreferrer" className="flex flex-row gap-2 items-center">
-            <FaWhatsapp scale={2} size={128} color="#25d366" />
+            <FaWhatsapp size={128} className="h-12 w-12 lg:h-24 lg:w-24" color="#25d366" />
             <p className="bg-gradient-to-r blur-xs from-[#25d366] py-2 to-teal-500 bg-clip-text text-xl lg:text-4xl box-content font-extrabold text-transparent text-center select-none">
               {t("contact-whatsapp")}
             </p>
           </a>
           <a href="mailto:info@digitalforge.be" rel="noreferrer" className="flex flex-row gap-2 items-center">
-            <BiMailSend size={128} color="#3963ed" />
+            <BiMailSend size={128} className="h-12 w-12 lg:h-24 lg:w-24" color="#3963ed" />
             <p className="bg-gradient-to-r blur-xs from-[#3963ed] to-blue-400 py-2 bg-clip-text overflow-visible text-xl lg:text-4xl box-content font-extrabold text-transparent text-center select-none">
               {t("contact-mail")}
             </p>
