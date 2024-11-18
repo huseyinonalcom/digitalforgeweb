@@ -1,6 +1,5 @@
 import AnimatedBackground from "@/components/fluff/AnimatedBackground";
-import banner from "../../../public/assets/images/digitalbanner.jpg";
-import { FaChartLine, FaCode, FaPaintBrush } from "react-icons/fa";
+import { FaChartLine, FaCode, FaPaintBrush, FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
 import { ButtonColorOut } from "@/components/ButtonColorOut";
 import dflogo from "../../../public/assets/logos/dflogo.svg";
 import { NavLink } from "@/components/navigation/NavLink";
@@ -9,12 +8,20 @@ import { useTranslations } from "next-intl";
 import Contact from "./contact/page";
 import Image from "next/image";
 import InfiniteCarousel from "@/components/fluff/AutoCarousel";
+import { BsWhatsapp } from "react-icons/bs";
+import { GrWhatsapp } from "react-icons/gr";
+import { ImWhatsapp } from "react-icons/im";
+import { PiWhatsappLogo, PiWhatsappLogoDuotone } from "react-icons/pi";
+import { TbBrandWhatsapp } from "react-icons/tb";
+import { FiMail } from "react-icons/fi";
+import { MdMailLock } from "react-icons/md";
+import { BiMailSend } from "react-icons/bi";
 
 export default function Home() {
   const t = useTranslations();
 
   return (
-    <div className="flex flex-col w-full items-center bg-[#1f1f1f]">
+    <div className="flex flex-col w-full items-center bg-[#d15742]">
       <AnimatedBackground />
       <BoxDiv className="min-h-[60vh] relative">
         <div className="text-white flex flex-col-reverse lg:flex-row justify-around gap-5 h-full max-w-[1500px] mx-auto">
@@ -109,16 +116,20 @@ export default function Home() {
           </div>
         </div>
       </BoxDiv>
-      <BoxDiv className="relative hidden lg:flex aspect-[900/239] w-full">
-        <Image
-          src={banner}
-          className="absolute"
-          fill
-          style={{
-            objectFit: "cover",
-          }}
-          alt={"background"}
-        />
+      <BoxDiv className="relative w-full">
+        <div className="flex flex-row gap-6 justify-between items-center max-w-[1200px] mx-auto">
+          <a
+            href="https://api.whatsapp.com/send?phone=32494550687"
+            target="_blank"
+            rel="noreferrer"
+            className="flex flex-row gap-2 items-center text-4xl font-bold text-white"
+          >
+            <FaWhatsapp size={128} color="#25d366" /> {t("contact-whatsapp")}
+          </a>
+          <a href="mailto:info@digitalforge.be" rel="noreferrer" className="flex flex-row gap-2 items-center text-4xl font-bold text-white">
+            <BiMailSend size={128} color="#3963ed" /> {t("contact-mail")}
+          </a>
+        </div>
       </BoxDiv>
       <BoxDiv className="bg-white">
         <Contact />

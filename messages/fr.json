@@ -58,7 +58,6 @@
     "service-7-subtext-3": "Gestion des commentaires, messages et interactions sur les comptes de médias sociaux, amélioration des relations avec les clients.",
     "service-7-subtitle-4": "Analyse des Médias Sociaux",
     "service-7-subtext-4": "Suivi des performances, rapports et optimisation des stratégies.",
-
     "service-8-title": "Publicité sur les Médias Sociaux",
     "service-8-subtitle-1": "Publicités Facebook et Instagram",
     "service-8-subtext-1": "Ciblage, création de contenu créatif, gestion de campagne et suivi des résultats.",
@@ -68,7 +67,6 @@
     "service-8-subtext-3": "Campagnes de tweets, augmentation de l'engagement et stratégies publicitaires alignées sur les tendances.",
     "service-8-subtitle-4": "Publicités TikTok",
     "service-8-subtext-4": "Campagnes vidéo créatives et ciblage efficace pour atteindre un public jeune.",
-
     "service-9-title": "Gestion de Google Ads",
     "service-9-subtitle-1": "Publicités sur le Réseau de Recherche Google",
     "service-9-subtext-1": "Création de campagnes publicitaires ciblées en fonction des requêtes des clients potentiels sur le moteur de recherche.",
@@ -80,7 +78,6 @@
     "service-9-subtext-4": "Campagnes de publicités vidéo, ciblage et optimisation du contenu vidéo.",
     "service-9-subtitle-5": "Remarketing",
     "service-9-subtext-5": "Campagnes de reciblage pour les utilisateurs ayant déjà visité le site.",
-
     "service-10-title": "Conseil en Publicité",
     "service-10-subtitle-1": "Développement de Stratégies Marketing",
     "service-10-subtext-1": "Création de stratégies publicitaires numériques sur mesure pour les entreprises.",
@@ -88,7 +85,6 @@
     "service-10-subtext-2": "Analyse des campagnes existantes et recommandations d'optimisation.",
     "service-10-subtitle-3": "Gestion du Budget",
     "service-10-subtext-3": "Gestion efficace du budget publicitaire et optimisation du ROI.",
-
     "service-11-title": "Services SEO",
     "service-11-subtitle-1": "Recherche de Mots-Clés",
     "service-11-subtext-1": "Détermination des mots-clés stratégiques en fonction des habitudes de recherche de votre public cible.",
@@ -98,19 +94,16 @@
     "service-11-subtext-3": "Création d'articles de blog, de contenu web et d'articles SEO-friendly.",
     "service-11-subtitle-4": "Création de Liens (Link Building)",
     "service-11-subtext-4": "Obtention de liens externes de haute qualité et augmentation de l'autorité du site.",
-
     "service-12-title": "Analyse et Reporting",
     "service-12-subtitle-1": "Rapports de Performance Mensuels",
     "service-12-subtext-1": "Rapports détaillés sur les performances des campagnes publicitaires, des comptes de médias sociaux et du trafic web.",
     "service-12-subtitle-2": "Analyse des Données",
     "service-12-subtext-2": "Analyses détaillées de votre public, de l'efficacité des campagnes et de la stratégie numérique globale.",
-
     "service-13-title": "Formation et Conseil",
     "service-13-subtitle-1": "Formation en Marketing Digital",
     "service-13-subtext-1": "Programmes de formation sur les médias sociaux, Google Ads et SEO pour entreprises et individus.",
     "service-13-subtitle-2": "Conseil en Marketing Digital",
     "service-13-subtext-2": "Accompagnement des équipes internes en marketing digital et contribution à leur développement.",
-
     "service-14-title": "Services de Conception Graphique pour les Médias Sociaux",
     "service-14-subtitle-1": "Conception de Publications pour les Médias Sociaux",
     "service-14-subtext-1": "Création de graphiques attrayants et représentant votre marque pour des plateformes telles que Facebook, Instagram et LinkedIn.",
@@ -122,7 +115,6 @@
     "service-14-subtext-4": "Création de graphiques publicitaires accrocheurs pour les campagnes publicitaires sur les médias sociaux, adaptés à votre public cible.",
     "service-14-subtitle-5": "Images Animées",
     "service-14-subtext-5": "Conception d'animations simples et de GIFs accrocheurs pour les médias sociaux pour augmenter l'engagement.",
-
     "service-15-title": "Conception de Signalétique Physique",
     "service-15-subtitle-1": "Panneaux de Magasin",
     "service-15-subtext-1": "Conception de panneaux de magasin accrocheurs et durables reflétant votre marque.",
@@ -134,7 +126,6 @@
     "service-15-subtext-4": "Création de conceptions de wrapping pour véhicules pour accroître la notoriété de la marque et faire de la publicité.",
     "service-15-subtitle-5": "Solutions Graphiques Intérieures",
     "service-15-subtext-5": "Conception de graphiques muraux, de vitrines et de solutions graphiques décoratives pour bureaux, magasins et autres espaces commerciaux.",
-
     "service-16-title": "Conception d'Identité Visuelle",
     "service-16-subtitle-1": "Conception de Logo",
     "service-16-subtext-1": "Création de logos uniques et professionnels reflétant votre marque.",
@@ -146,6 +137,8 @@
     "service-16-subtext-4": "Création de modèles professionnels et impressionnants pour vos présentations adaptées à votre marque.",
     "service-16-subtitle-5": "Autres Documents d'Entreprise",
     "service-16-subtext-5": "Conception de divers documents d'entreprise tels que factures, brochures et dossiers de proposition.",
-    "our-partners": "Nos Partenaires"
+    "our-partners": "Nos Partenaires",
+    "contact-whatsapp": "Contactez-nous sur WhatsApp!",
+    "contact-mail": "Envoyez-nous un E-mail!"
   }
 }

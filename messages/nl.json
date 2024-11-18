@@ -58,7 +58,6 @@
     "service-7-subtext-3": "Beheer van reacties, berichten en interacties op sociale media-accounts, en verbetering van klantrelaties.",
     "service-7-subtitle-4": "Social Media Analyse",
     "service-7-subtext-4": "Prestatiebewaking, rapportage en optimalisatie van strategieën.",
-
     "service-8-title": "Social Media Adverteren",
     "service-8-subtitle-1": "Facebook- en Instagram-advertenties",
     "service-8-subtext-1": "Targeting, creatie van creatieve content, campagnebeheer en resultaatbewaking.",
@@ -68,7 +67,6 @@
     "service-8-subtext-3": "Tweetcampagnes, verhoogde betrokkenheid, en advertentie strategieën afgestemd op trends.",
     "service-8-subtitle-4": "TikTok-advertenties",
     "service-8-subtext-4": "Creatieve videocampagnes en effectieve targeting voor jonge doelgroepen.",
-
     "service-9-title": "Google Ads Beheer",
     "service-9-subtitle-1": "Google Zoeknetwerk advertenties (Search Ads)",
     "service-9-subtext-1": "Advertentiecampagnes opzetten die gericht zijn op zoekopdrachten van potentiële klanten in de zoekmachine.",
@@ -80,7 +78,6 @@
     "service-9-subtext-4": "Videoadvertentiecampagnes, targeting en optimalisatie van videocontent.",
     "service-9-subtitle-5": "Remarketing",
     "service-9-subtext-5": "Retargetingcampagnes gericht op gebruikers die eerder hebben bezocht.",
-
     "service-10-title": "Advertentieadvies",
     "service-10-subtitle-1": "Ontwikkeling van een Marketingstrategie",
     "service-10-subtext-1": "Creëren van digitale advertentie strategieën op maat voor bedrijven.",
@@ -88,7 +85,6 @@
     "service-10-subtext-2": "Analyseren van bestaande campagnes en het geven van optimalisatieadviezen.",
     "service-10-subtitle-3": "Budgetbeheer",
     "service-10-subtext-3": "Effectief beheren van het advertentiebudget en het behalen van maximale ROI.",
-
     "service-11-title": "SEO Diensten",
     "service-11-subtitle-1": "Zoekwoordenonderzoek",
     "service-11-subtext-1": "Strategische zoekwoorden bepalen op basis van de zoekgewoonten van uw doelgroep.",
@@ -98,19 +94,16 @@
     "service-11-subtext-3": "Creëren van SEO-vriendelijke blogposts, artikelen en webpagina-inhoud.",
     "service-11-subtitle-4": "Linkbuilding",
     "service-11-subtext-4": "Verkrijgen van hoogwaardige externe links en het verhogen van de site autoriteit.",
-
     "service-12-title": "Analyse en Rapportage",
     "service-12-subtitle-1": "Maandelijkse Prestatierapporten",
     "service-12-subtext-1": "Gedetailleerde prestatie rapporten van advertentiecampagnes, social media accounts en webverkeer.",
     "service-12-subtitle-2": "Data-analyse",
     "service-12-subtext-2": "Gedetailleerde analyses van uw doelgroep, campagne-effectiviteit en algehele digitale strategie.",
-
     "service-13-title": "Opleiding en Advies",
     "service-13-subtitle-1": "Digitale Marketing Opleiding",
     "service-13-subtext-1": "Trainingsprogramma's over social media, Google Ads en SEO voor bedrijven en individuen.",
     "service-13-subtitle-2": "Digitale Marketing Advies",
     "service-13-subtext-2": "Begeleiding van uw interne teams op het gebied van digitale marketing en bijdragen aan hun ontwikkeling.",
-
     "service-14-title": "Social Media Grafisch Ontwerp Diensten",
     "service-14-subtitle-1": "Ontwerp van Social Media Posts",
     "service-14-subtext-1": "Ontwerpen van opvallende en merkrepresentatieve graphics voor platforms zoals Facebook, Instagram en LinkedIn.",
@@ -122,7 +115,6 @@
     "service-14-subtext-4": "Creëren van opvallende advertentie graphics voor social media reclamecampagnes die geschikt zijn voor uw doelgroep.",
     "service-14-subtitle-5": "Geanimeerde Afbeeldingen",
     "service-14-subtext-5": "Ontwerpen van eenvoudige animaties en GIF's voor social media die de aandacht trekken en de betrokkenheid verhogen.",
-
     "service-15-title": "Ontwerp van Fysieke Bord- en Bewegwijzering",
     "service-15-subtitle-1": "Winkelborden",
     "service-15-subtext-1": "Ontwerpen van opvallende en duurzame winkelborden die uw merk weerspiegelen.",
@@ -134,7 +126,6 @@
     "service-15-subtext-4": "Creëren van wrap-ontwerpen voor voertuigen die de merkbekendheid vergroten en reclame maken.",
     "service-15-subtitle-5": "Grafische Oplossingen voor Interieur",
     "service-15-subtext-5": "Ontwerpen van muur graphics, etalages en decoratieve grafische oplossingen voor kantoren, winkels en andere commerciële ruimtes.",
-
     "service-16-title": "Ontwerp van Bedrijfsidentiteit",
     "service-16-subtitle-1": "Logo Ontwerp",
     "service-16-subtext-1": "Ontwerpen van unieke en professionele logo's die uw merk weerspiegelen.",
@@ -146,6 +137,8 @@
     "service-16-subtext-4": "Ontwerpen van professionele en indrukwekkende sjablonen die geschikt zijn voor uw merkpresentaties.",
     "service-16-subtitle-5": "Andere Bedrijfsdocumenten",
     "service-16-subtext-5": "Ontwerpen van diverse bedrijfsdocumenten zoals facturen, brochures en offerte dossiers.",
-    "our-partners": "Onze Partners"
+    "our-partners": "Onze Partners",
+    "contact-whatsapp": "Bereik ons op WhatsApp!",
+    "contact-mail": "Stuur ons een E-mail!"
   }
 }
