@@ -18,35 +18,44 @@ const InfiniteCarousel = () => {
   const baseImages = [ayfema, bestKebap, beymen, graffen, istanbulFood, makkssoo, yms, agromen, somers, mfh, anatolia];
   const [images, setImages] = useState([...baseImages, ...baseImages, ...baseImages]);
   const [position, setPosition] = useState(0);
+  const [speed, setSpeed] = useState(0.5);
   const containerRef = useRef(null);
 
   useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 700) {
+        setSpeed(1); // Faster speed for small screens
+      } else {
+        setSpeed(0.5); // Normal speed for larger screens
+      }
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add resize listener
+    window.addEventListener("resize", handleResize);
+
     const animation = setInterval(() => {
       setPosition((prev) => {
-        const newPosition = prev - 0.5;
+        const newPosition = prev - speed;
 
-        // When first image is about to exit view, append a new set to the end
         if (newPosition % 33.333 === 0) {
           setImages((currentImages) => [...currentImages, ...baseImages]);
         }
 
         return newPosition;
       });
-    }, 90);
+    }, 30);
 
-    return () => clearInterval(animation);
-  }, []);
+    return () => {
+      clearInterval(animation);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [speed]); // Added speed to dependency array
 
   return (
-    <div
-      ref={containerRef}
-      style={{
-        overflow: "hidden",
-        position: "relative",
-        width: "100%",
-        height: "200px",
-      }}
-    >
+    <div ref={containerRef} className="overflow-hidden relative w-full h-32 lg:h-[200px]">
       <div
         style={{
           display: "flex",
@@ -60,7 +69,7 @@ const InfiniteCarousel = () => {
             key={`${index}-${position}`}
             style={{
               flex: "0 0 33.333%",
-              height: "200px",
+              height: "100%",
               padding: "1rem",
               display: "flex",
               justifyContent: "center",
