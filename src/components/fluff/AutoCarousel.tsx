@@ -26,7 +26,7 @@ const InfiniteCarousel = () => {
       if (window.innerWidth < 700) {
         setSpeed(0.4);
       } else {
-        setSpeed(.8);
+        setSpeed(0.8);
       }
     };
 
@@ -55,11 +55,11 @@ const InfiniteCarousel = () => {
   return (
     <div
       ref={containerRef}
+      className="h-[100px] lg:h-[150px]"
       style={{
         overflow: "hidden",
         position: "relative",
         width: "100%",
-        height: "200px",
       }}
     >
       <div
@@ -73,9 +73,9 @@ const InfiniteCarousel = () => {
         {images.map((image, index) => (
           <div
             key={`${index}-${position}`}
+            className="h-[100px] lg:h-[150px]"
             style={{
               flex: "0 0 33.333%",
-              height: "200px",
               padding: "1rem",
               display: "flex",
               justifyContent: "center",
