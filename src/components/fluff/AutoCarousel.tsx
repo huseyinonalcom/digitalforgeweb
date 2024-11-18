@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import ayfema from "../../../public/assets/logos/ayfema-1.png";
 import bestKebap from "../../../public/assets/logos/BestKebap.png";
@@ -16,67 +16,83 @@ import anatolia from "../../../public/assets/logos/anatolia.png";
 
 const InfiniteCarousel = () => {
   const baseImages = [ayfema, bestKebap, beymen, graffen, istanbulFood, makkssoo, yms, agromen, somers, mfh, anatolia];
-  const [images, setImages] = useState([...baseImages, ...baseImages, ...baseImages]);
-  const [position, setPosition] = useState(0);
-  const [speed, setSpeed] = useState(0.5);
   const containerRef = useRef(null);
+  const animationSpeedRef = useRef(0.3); // Default speed
+  const isLargeScreenRef = useRef(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 700) {
-        setSpeed(0.4);
-      } else {
-        setSpeed(0.6);
+    const container = containerRef.current;
+    let animationFrame;
+
+    // Update speed and height based on screen size
+    const updateAnimationSettings = () => {
+      isLargeScreenRef.current = window.innerWidth > 700;
+      animationSpeedRef.current = isLargeScreenRef.current ? 0.6 : 0.4;
+      container.style.height = isLargeScreenRef.current ? "150px" : "100px";
+    };
+
+    // Smoothly reset the position when reaching the end
+    const resetPositionIfNeeded = () => {
+      const currentTransform = parseFloat(container.style.transform.replace("translateX(", "").replace("px)", "")) || 0;
+      const containerWidth = container.scrollWidth / 3; // Only consider a third (base images set)
+
+      if (Math.abs(currentTransform) >= containerWidth) {
+        container.style.transition = "none"; // Disable transition for instant reset
+        container.style.transform = "translateX(0px)";
+        requestAnimationFrame(() => {
+          container.style.transition = "transform 0.1s linear"; // Re-enable smooth scrolling
+        });
       }
     };
 
-    handleResize();
+    // Animate the carousel
+    const animate = () => {
+      const currentTransform = parseFloat(container.style.transform.replace("translateX(", "").replace("px)", "")) || 0;
+      container.style.transform = `translateX(${currentTransform - animationSpeedRef.current}px)`;
+      resetPositionIfNeeded();
+      animationFrame = requestAnimationFrame(animate);
+    };
 
-    window.addEventListener("resize", handleResize);
+    // Initial setup
+    updateAnimationSettings();
+    animate();
 
-    const animation = setInterval(() => {
-      setPosition((prev) => {
-        const newPosition = prev - speed;
-
-        if (newPosition % 33.333 === 0) {
-          setImages((currentImages) => [...currentImages, ...baseImages, ...baseImages]);
-        }
-
-        return newPosition;
-      });
-    }, 90);
+    // Handle screen resize
+    window.addEventListener("resize", updateAnimationSettings);
 
     return () => {
-      clearInterval(animation);
-      window.removeEventListener("resize", handleResize);
+      cancelAnimationFrame(animationFrame);
+      window.removeEventListener("resize", updateAnimationSettings);
     };
-  }, [speed]);
+  }, []);
 
   return (
     <div
-      ref={containerRef}
-      className="h-[100px] lg:h-[150px]"
       style={{
         overflow: "hidden",
         position: "relative",
         width: "100%",
+        height: "100px", // Default height
+        transition: "height 0.3s ease",
       }}
     >
       <div
+        ref={containerRef}
         style={{
           display: "flex",
-          transform: `translateX(${position}%)`,
-          transition: "transform 0.1s linear",
           gap: "2rem",
+          willChange: "transform",
+          transform: "translateX(0px)",
+          transition: "transform 0.1s linear", // Smooth scrolling
         }}
       >
-        {images.map((image, index) => (
+        {[...baseImages, ...baseImages, ...baseImages].map((image, index) => (
           <div
-            key={`${index}-${position}`}
-            className="h-[100px] lg:h-[150px]"
+            key={index}
             style={{
-              flex: "0 0 33.333%",
-              padding: "1rem",
+              flex: "0 0 auto",
+              width: "30%",
+              height: "100px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -85,9 +101,10 @@ const InfiniteCarousel = () => {
             <Image
               src={image}
               alt={`Logo ${index}`}
+              loading="lazy"
               style={{
                 width: "auto",
-                height: "100%",
+                height: "100px",
                 objectFit: "contain",
               }}
             />
