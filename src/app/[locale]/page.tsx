@@ -1,13 +1,14 @@
-import { ButtonColorOut } from "@/components/ButtonColorOut";
-import { BoxDiv } from "@/components/containers/box-div";
 import AnimatedBackground from "@/components/fluff/AnimatedBackground";
-import { NavLink } from "@/components/navigation/NavLink";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import { FaChartLine, FaCode, FaPaintBrush } from "react-icons/fa";
-import dflogo from "../../../public/assets/logos/dflogo.svg";
 import banner from "../../../public/assets/images/digitalbanner.jpg";
+import { FaChartLine, FaCode, FaPaintBrush } from "react-icons/fa";
+import { ButtonColorOut } from "@/components/ButtonColorOut";
+import dflogo from "../../../public/assets/logos/dflogo.svg";
+import { NavLink } from "@/components/navigation/NavLink";
+import { BoxDiv } from "@/components/containers/box-div";
+import { useTranslations } from "next-intl";
 import Contact from "./contact/page";
+import Image from "next/image";
+import InfiniteCarousel from "@/components/fluff/AutoCarousel";
 
 export default function Home() {
   const t = useTranslations();
@@ -70,6 +71,7 @@ export default function Home() {
       <BoxDiv className="bg-white">
         <div className="flex flex-col gap-6 items-center justify-center max-w-[1500px] mx-auto">
           <h1 className="text-4xl font-bold">{t("our-partners")}</h1>
+          <InfiniteCarousel />
         </div>
       </BoxDiv>
       <BoxDiv className="bg-white">
