@@ -110,12 +110,12 @@ export default function Home() {
         </div>
       </BoxDiv>
       <BoxDiv className="relative w-full">
-        <div className="flex flex-row gap-6 justify-between items-center max-w-[1200px] mx-auto">
+        <div className="flex flex-col lg:flex-row gap-6 justify-between items-center max-w-[1200px] mx-auto">
           <a
             href="https://api.whatsapp.com/send?phone=32494550687"
             target="_blank"
             rel="noreferrer"
-            className="flex flex-row gap-2 items-center text-4xl font-bold text-white"
+            className="flex flex-row gap-2 items-center text-2xl lg:text-4xl font-bold text-white"
           >
             <FaWhatsapp size={128} color="#25d366" /> {t("contact-whatsapp")}
           </a>
