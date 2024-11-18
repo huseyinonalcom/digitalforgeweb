@@ -21,8 +21,8 @@ const InfiniteCarousel = () => {
   const isLargeScreenRef = useRef(false);
 
   useEffect(() => {
-    const container = containerRef.current;
-    let animationFrame;
+    const container = containerRef.current! as HTMLDivElement;
+    let animationFrame: number;
 
     // Update speed and height based on screen size
     const updateAnimationSettings = () => {
