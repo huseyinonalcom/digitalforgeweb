@@ -25,7 +25,7 @@ export const MobileDrawer = ({
 
   return (
     <>
-      <button name="open nav menu" aria-label="open nav menu" className="lg:hidden" type="button" onClick={() => setDrawerOpen(!drawerOpen)}>
+      <button name="open nav menu" aria-label="open nav menu" className="lg:hidden text-white" type="button" onClick={() => setDrawerOpen(!drawerOpen)}>
         <GiHamburgerMenu size={32} />
       </button>
       <div className={`fixed duration-300 top-0 w-screen h-screen flex-col gap-2 ease-in ${drawerOpen ? "right-0" : "-right-[100%]"}`}>

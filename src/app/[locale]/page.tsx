@@ -1,7 +1,7 @@
 import AnimatedBackground from "@/components/fluff/AnimatedBackground";
 import { FaChartLine, FaCode, FaPaintBrush, FaWhatsapp } from "react-icons/fa";
 import { ButtonColorOut } from "@/components/ButtonColorOut";
-import dflogo from "../../../public/assets/logos/dflogo.svg";
+import bannerone from "../../../public/assets/images/homepagebanner.jpg";
 import { NavLink } from "@/components/navigation/NavLink";
 import { BoxDiv } from "@/components/containers/box-div";
 import { useTranslations } from "next-intl";
@@ -13,14 +13,52 @@ import { BiMailSend } from "react-icons/bi";
 export default function Home() {
   const t = useTranslations();
 
+  const introTR = (
+    <h2 className="text-3xl lg:text-5xl font-bold w-[250px] md:w-[390px] text-center">
+      <span className="whitespace-nowrap">“Dijital başarınız</span>
+      <br />
+      için o <span className="text-red-600">son adım</span>”
+    </h2>
+  );
+
+  const introEN = (
+    <h2 className="text-3xl lg:text-5xl font-bold w-[250px] md:w-[390px] text-center">
+      “Dijital başarınız için o <p className="text-red-600">son adım</p>”
+    </h2>
+  );
+  const introFR = (
+    <h2 className="text-3xl lg:text-5xl font-bold w-[250px] md:w-[390px] text-center">
+      “Dijital başarınız için o <p className="text-red-600">son adım</p>”
+    </h2>
+  );
+  const introNL = (
+    <h2 className="text-3xl lg:text-5xl font-bold w-[250px] md:w-[390px] text-center">
+      “Dijital başarınız için o<br />
+      <span className="text-red-600">son adım</span>”
+    </h2>
+  );
+
+  const Intro = ({ locale }: { locale: string }) => {
+    switch (locale) {
+      case "tr":
+        return introTR;
+      case "en":
+        return introEN;
+      case "nl":
+        return introNL;
+      case "fr":
+        return introFR;
+    }
+  };
+
   return (
     <div className="flex flex-col w-full items-center bg-[#d15742]">
       <AnimatedBackground />
-      <BoxDiv className="min-h-[60vh] relative">
-        <div className="text-white flex flex-col-reverse lg:flex-row justify-around gap-5 h-full max-w-[1500px] mx-auto">
-          <div className="flex flex-col gap-2 items-center justify-center">
-            <h2 className="text-xl lg:text-3xl font-bold w-full text-center">{t("intro-title")}</h2>
-            <p className="text-lg text-center">{t("intro-text")}</p>
+      <BoxDiv className="min-h-[70vh] relative">
+        <Image priority src={bannerone} alt="Digital Forge Banner" className="w-full absolute -z-10" fill style={{ objectFit: "cover" }} />
+        <div className="text-black flex flex-col lg:flex-row justify-start pt-14 gap-5 h-full max-w-[1500px] mx-auto">
+          <div className="flex flex-col gap-6 items-center justify-center">
+            <Intro locale={t("locale")} />
             <div className="flex flex-row gap-4">
               <NavLink href="projects">
                 <ButtonColorOut>{t("intro-projects")}</ButtonColorOut>
@@ -29,9 +67,6 @@ export default function Home() {
                 <ButtonColorOut>{t("intro-contact")}</ButtonColorOut>
               </NavLink>
             </div>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <Image priority src={dflogo} alt="Digital Forge Logo" />
           </div>
         </div>
       </BoxDiv>

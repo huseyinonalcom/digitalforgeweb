@@ -1,15 +1,15 @@
 {
   "common": {
     "locale": "tr",
-    "hot-press": "Hot Press",
+    "homepage": "Anasayfa",
+    "reach-us": "Bize Ulaşın",
     "projects": "Projeler",
     "services": "Hizmetler",
     "about-us": "Hakkımızda",
     "references": "Referanslar",
     "our-partners": "Nerelerdeyiz?",
     "contact": "İletişim",
-    "intro-title": "Çevrimiçi varlığınızı belirleyin",
-    "intro-text": "Dijital pazarlama ve geliştirme konusunda sizin ortağınızız",
+    "intro-title": "“Dijital başarınız için o son adım”",
     "intro-projects": "Projelerimiz",
     "intro-contact": "Bize Ulaşın",
     "contact-us": "Bize Ulaşın",

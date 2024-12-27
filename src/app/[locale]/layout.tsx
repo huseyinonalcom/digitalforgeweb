@@ -41,7 +41,7 @@ export default async function LocaleLayout(props: Props) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body>
+      <body className="bg-black">
         <NextIntlClientProvider messages={messages}>
           <MainHeader />
           <main className="h-[calc(100vh-80px)] overflow-y-auto flex flex-col items-center">{props.children}</main>
