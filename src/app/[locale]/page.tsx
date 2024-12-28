@@ -1,5 +1,5 @@
 import AnimatedBackground from "@/components/fluff/AnimatedBackground";
-import { FaArrowRight, FaArrowUp, FaChartLine, FaCode, FaPaintBrush, FaWhatsapp } from "react-icons/fa";
+import { FaArrowUp, FaWhatsapp } from "react-icons/fa";
 import { ButtonColorOut } from "@/components/ButtonColorOut";
 import bannerone from "../../../public/assets/images/homepagebanner.jpg";
 import { NavLink } from "@/components/navigation/NavLink";
