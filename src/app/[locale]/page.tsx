@@ -1,18 +1,18 @@
-import AnimatedBackground from "@/components/fluff/AnimatedBackground";
-import { FaArrowUp, FaWhatsapp } from "react-icons/fa";
-import { ButtonColorOut } from "@/components/ButtonColorOut";
 import bannerone from "../../../public/assets/images/homepagebanner.jpg";
-import { NavLink } from "@/components/navigation/NavLink";
-import { BoxDiv } from "@/components/containers/box-div";
-import { useTranslations } from "next-intl";
-import Contact from "./contact/page";
-import Image from "next/image";
-import InfiniteCarousel from "@/components/fluff/AutoCarousel";
-import { BiMailSend } from "react-icons/bi";
-import design from "../../../public/assets/images/design.png";
+import AnimatedBackground from "@/components/fluff/AnimatedBackground";
 import marketing from "../../../public/assets/images/marketing.png";
 import website from "../../../public/assets/images/website.png";
+import InfiniteCarousel from "@/components/fluff/AutoCarousel";
+import design from "../../../public/assets/images/design.png";
+import { ButtonColorOut } from "@/components/ButtonColorOut";
+import { NavLink } from "@/components/navigation/NavLink";
+import { BoxDiv } from "@/components/containers/box-div";
+import { FaArrowUp, FaWhatsapp } from "react-icons/fa";
+import { useTranslations } from "next-intl";
+import { BiMailSend } from "react-icons/bi";
 import { Link } from "@/i18n/routing";
+import Contact from "./contact/page";
+import Image from "next/image";
 
 export default function Home() {
   const t = useTranslations();
