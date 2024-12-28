@@ -1,5 +1,5 @@
 import AnimatedBackground from "@/components/fluff/AnimatedBackground";
-import { FaChartLine, FaCode, FaPaintBrush, FaWhatsapp } from "react-icons/fa";
+import { FaArrowRight, FaArrowUp, FaChartLine, FaCode, FaPaintBrush, FaWhatsapp } from "react-icons/fa";
 import { ButtonColorOut } from "@/components/ButtonColorOut";
 import bannerone from "../../../public/assets/images/homepagebanner.jpg";
 import { NavLink } from "@/components/navigation/NavLink";
@@ -9,6 +9,10 @@ import Contact from "./contact/page";
 import Image from "next/image";
 import InfiniteCarousel from "@/components/fluff/AutoCarousel";
 import { BiMailSend } from "react-icons/bi";
+import design from "../../../public/assets/images/design.png";
+import marketing from "../../../public/assets/images/marketing.png";
+import website from "../../../public/assets/images/website.png";
+import { Link } from "@/i18n/routing";
 
 export default function Home() {
   const t = useTranslations();
@@ -20,21 +24,25 @@ export default function Home() {
       için o <span className="text-red-600">son adım</span>”
     </h2>
   );
-
   const introEN = (
-    <h2 className="text-3xl lg:text-5xl font-bold w-[250px] md:w-[390px] text-center">
-      “Dijital başarınız için o <p className="text-red-600">son adım</p>”
+    <h2 className="text-3xl lg:text-5xl font-bold w-[290px] md:w-[490px] text-center">
+      “<span className="text-red-600">The final step</span> to
+      <br />
+      your digital success”
     </h2>
   );
   const introFR = (
-    <h2 className="text-3xl lg:text-5xl font-bold w-[250px] md:w-[390px] text-center">
-      “Dijital başarınız için o <p className="text-red-600">son adım</p>”
+    <h2 className="text-2xl lg:text-4xl font-bold w-[290px] md:w-[490px] text-center">
+      “<span className="text-red-600">La dernière étape</span> pour
+      <br />
+      votre succès digitale”
     </h2>
   );
   const introNL = (
-    <h2 className="text-3xl lg:text-5xl font-bold w-[250px] md:w-[390px] text-center">
-      “Dijital başarınız için o<br />
-      <span className="text-red-600">son adım</span>”
+    <h2 className="text-3xl lg:text-5xl font-bold w-[310px] md:w-[490px] text-center">
+      “<span className="text-red-600">Het laatste stap</span> naar
+      <br />
+      uw digitale success”
     </h2>
   );
 
@@ -70,35 +78,53 @@ export default function Home() {
           </div>
         </div>
       </BoxDiv>
-      <BoxDiv className="bg-white">
-        <div className="flex flex-col gap-6 items-center justify-center max-w-[1200px] mx-auto">
-          <h1 className="text-4xl font-bold mx-auto">{t("who-are-we-title")}</h1>
-          <p className="text-lg text-center">{t("who-are-we-text")}</p>
-        </div>
-      </BoxDiv>
       <BoxDiv>
         <div className="flex flex-col gap-6 items-center text-white justify-center max-w-[1500px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 w-full">
             <div className="flex flex-col gap-2 items-start rounded-md text-white p-4">
               <div className="flex flex-row items-center justify-between w-full">
-                <h1 className="text-3xl font-bold">{t("services-1-title")}</h1>
-                <FaChartLine color="yellow" size={64} />
+                <h1 className="text-3xl font-bold text-center">{t("services-1-title")}</h1>
+              </div>
+              <div className="relative h-48 w-full">
+                <Image priority src={marketing} alt="Marketing Image" className="absolute" fill style={{ objectFit: "contain" }} />
               </div>
               <p>{t("services-1-text")}</p>
+              <Link href={"/marketing"} className="bg-black text-white rounded-md pr-8 pl-4 py-2 mt-4 flex flex-row gap-1 items-center mx-auto">
+                {t("services-1-button")}
+                <div className="h-8 animate-bounce" style={{ rotate: "90deg" }}>
+                  <FaArrowUp size={16} />
+                </div>
+              </Link>
             </div>
             <div className="flex flex-col gap-2 items-start rounded-md text-white p-4">
               <div className="flex flex-row items-center justify-between w-full">
-                <h1 className="text-3xl font-bold">{t("services-2-title")}</h1>
-                <FaPaintBrush color="red" size={64} />
+                <h1 className="text-3xl font-bold text-center">{t("services-2-title")}</h1>
+              </div>
+              <div className="relative h-48 w-full">
+                <Image priority src={website} alt="Website Image" className="absolute" fill style={{ objectFit: "contain" }} />
               </div>
               <p>{t("services-2-text")}</p>
+              <Link href={"/website"} className="bg-black text-white rounded-md pr-8 pl-4 py-2 mt-4 flex flex-row gap-1 items-center mx-auto">
+                {t("services-1-button")}
+                <div className="h-8 animate-bounce" style={{ rotate: "90deg" }}>
+                  <FaArrowUp size={16} />
+                </div>
+              </Link>
             </div>
             <div className="flex flex-col gap-2 items-start rounded-md text-white p-4">
               <div className="flex flex-row items-center justify-between w-full">
-                <h1 className="text-3xl font-bold">{t("services-3-title")}</h1>
-                <FaCode color="#1fa800" size={64} />
+                <h1 className="text-3xl font-bold text-center">{t("services-3-title")}</h1>
               </div>
-              <p>{t("services-3-text")}</p>
+              <div className="relative h-48 w-full">
+                <Image priority src={design} alt="Design Image" className="absolute" fill style={{ objectFit: "contain" }} />
+              </div>
+              <p className="px-2">{t("services-3-text")}</p>
+              <Link href={"/design"} className="bg-black text-white rounded-md pr-8 pl-4 py-2 mt-4 flex flex-row gap-1 items-center mx-auto">
+                {t("services-1-button")}
+                <div className="h-8 animate-bounce" style={{ rotate: "90deg" }}>
+                  <FaArrowUp size={16} />
+                </div>
+              </Link>
             </div>
           </div>
         </div>
