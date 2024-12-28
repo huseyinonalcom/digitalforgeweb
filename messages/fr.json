@@ -1,6 +1,8 @@
 {
   "common": {
     "locale": "fr",
+    "homepage": "Page d'accueil",
+    "reach-us": "Contactez-nous",
     "hot-press": "Hot Press",
     "projects": "Projets",
     "services": "Services",

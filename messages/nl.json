@@ -1,6 +1,8 @@
 {
   "common": {
     "locale": "nl",
+    "homepage": "Startpagina",
+    "reach-us": "Bereik ons",
     "hot-press": "Hot Press",
     "projects": "Projecten",
     "services": "Diensten",
