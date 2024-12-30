@@ -1,9 +1,11 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
-import { routing } from "@/i18n/routing";
+import { Link, routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { MainHeader } from "@/components/MainHeader";
 import { ReactNode } from "react";
+import { BoxDiv } from "@/components/containers/box-div";
+import Contact from "./contact/page";
 
 type Props = {
   children: ReactNode;
@@ -44,7 +46,18 @@ export default async function LocaleLayout(props: Props) {
       <body className="bg-black">
         <NextIntlClientProvider messages={messages}>
           <MainHeader />
-          <main className="h-[calc(100vh-80px)] overflow-y-auto flex flex-col items-center">{props.children}</main>
+          <main className="h-[calc(100vh-80px)] overflow-y-auto flex flex-col items-center">
+            {props.children}
+            <footer className="flex w-full flex-col items-center justify-center bg-black">
+              <BoxDiv className="bg-white">
+                <Contact />
+              </BoxDiv>
+              <div className="text-center text-sm text-white py-4">
+                © {new Date().getFullYear()} Digital Forge. All rights reserved. - <Link href="/tc">Terms and Conditions</Link> -{" "}
+                <Link href="/privacy">Privacy Policy</Link>
+              </div>
+            </footer>
+          </main>
         </NextIntlClientProvider>
       </body>
     </html>
