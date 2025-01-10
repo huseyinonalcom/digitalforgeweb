@@ -17,11 +17,14 @@ const Accordion = ({ title, children, expanded, onClick }: { title: string; chil
         </div>
       </div>
       <div
-        className={`grid grid-rows-auto gap-2 items-start ml-4 overflow-hidden transition-all duration-300 ease-in-out ${
-          expanded ? "opacity-100 h-auto" : "opacity-0 h-0"
-        }`}
+        style={{
+          display: "grid",
+          gridTemplateRows: expanded ? "1fr" : "0fr",
+          transition: "grid-template-rows 0.3s ease-in-out",
+          marginLeft: "1rem",
+        }}
       >
-        {children}
+        <div className="flex flex-col gap-2 items-start overflow-hidden">{children}</div>
       </div>
     </div>
   );
