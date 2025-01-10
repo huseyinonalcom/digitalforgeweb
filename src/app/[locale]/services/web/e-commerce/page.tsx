@@ -22,7 +22,7 @@ export default function Services() {
         </div>
       </div>
       <div className="w-full bg-white flex flex-col items-center">
-        <div className="flex flex-col gap-4 w-full items-center p-8 max-w-screen-2xl">
+        <div className="flex flex-col gap-4 w-full items-center p-8 max-w-screen-xl">
           <p>{t("e-commerce-intro")}</p>
           <p>
             <strong>{t("e-commerce-title-1")}</strong>

@@ -9,7 +9,7 @@ import { BiChevronUp } from "react-icons/bi";
 
 const Accordion = ({ title, children, expanded, onClick }: { title: string; children: React.ReactNode; expanded: boolean; onClick?: () => void }) => {
   return (
-    <div className="flex flex-col gap-2 items-start">
+    <div className="flex flex-col items-start">
       <div className={`flex flex-row items-center gap-3 cursor-pointer`} onClick={() => onClick && onClick()}>
         <p className="text-xl font-bold">{title}</p>
         <div className={`duration-300 ease-in ${expanded ? "rotate-180" : "rotate-0"}`}>
