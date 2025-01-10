@@ -12,6 +12,82 @@ import { useTranslations } from "next-intl";
 import { BiMailSend } from "react-icons/bi";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
+const Service = ({
+  title,
+  text,
+  image,
+  alt,
+  buttonText,
+  href,
+  right,
+}: {
+  title: string;
+  text: string;
+  image: StaticImport;
+  alt: string;
+  buttonText: string;
+  href: string;
+  right?: boolean;
+}) => {
+  return (
+    <>
+      <div className="flex flex-col gap-2 items-start rounded-md text-white p-4 lg:hidden">
+        <div className="flex flex-row items-center justify-between w-full">
+          <h1 className="text-3xl font-bold text-center">{title}</h1>
+        </div>
+        <div className="relative h-48 w-full">
+          <Image priority src={image} alt={alt} className="absolute" fill style={{ objectFit: "contain" }} />
+        </div>
+        <p>{text}</p>
+        <Link href={href} className="bg-black text-white rounded-md pr-8 pl-4 py-2 mt-4 flex flex-row gap-1 items-center mx-auto">
+          {buttonText}
+          <div className="h-8 animate-bounce" style={{ rotate: "90deg" }}>
+            <FaArrowUp size={16} />
+          </div>
+        </Link>
+      </div>
+      {!right ? (
+        <div className="hidden flex-row gap-2 items-center justify-center w-full rounded-md text-white p-4 lg:flex">
+          <div className="w-1/2 flex flex-col items-end">
+            <div className="w-[530px] flex flex-col items-end gap-12">
+              <h1 className="text-3xl font-bold text-right">{title}</h1>
+              <p className="text-right">{text}</p>
+              <Link href={href} className="bg-black text-white rounded-md pr-8 pl-4 py-2 mt-4 flex flex-row gap-1 items-center ml-auto">
+                {buttonText}
+                <div className="h-8 animate-bounce" style={{ rotate: "90deg" }}>
+                  <FaArrowUp size={16} />
+                </div>
+              </Link>
+            </div>
+          </div>
+          <div className="relative h-96 w-1/2">
+            <Image priority src={image} alt={alt} className="absolute" fill style={{ objectFit: "contain" }} />
+          </div>
+        </div>
+      ) : (
+        <div className="hidden flex-row gap-2 items-center justify-center w-full rounded-md text-white p-4 lg:flex">
+          <div className="relative h-96 w-1/2">
+            <Image priority src={image} alt={alt} className="absolute" fill style={{ objectFit: "contain" }} />
+          </div>
+          <div className="w-1/2 flex flex-col items-start">
+            <div className="w-[530px] flex flex-col items-start gap-12">
+              <h1 className="text-3xl font-bold text-left">{title}</h1>
+              <p className="text-left">{text}</p>
+              <Link href={href} className="bg-black text-white rounded-md pr-8 pl-4 py-2 mt-4 flex flex-row gap-1 items-center mr-auto">
+                {buttonText}
+                <div className="h-8 animate-bounce" style={{ rotate: "90deg" }}>
+                  <FaArrowUp size={16} />
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
 
 export default function Home() {
   const t = useTranslations();
@@ -79,58 +155,32 @@ export default function Home() {
       </BoxDiv>
       <BoxDiv>
         <div className="flex flex-col gap-6 items-center text-white justify-center max-w-[1500px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 w-full">
-            <div className="flex flex-col gap-2 items-start rounded-md text-white p-4">
-              <div className="flex flex-row items-center justify-between w-full">
-                <h1 className="text-3xl font-bold text-center">{t("services-1-title")}</h1>
-              </div>
-              <div className="relative h-48 w-full">
-                <Image priority src={marketing} alt="Marketing Image" className="absolute" fill style={{ objectFit: "contain" }} />
-              </div>
-              <p>{t("services-1-text")}</p>
-              <Link
-                href={"/services/marketing/social-media"}
-                className="bg-black text-white rounded-md pr-8 pl-4 py-2 mt-4 flex flex-row gap-1 items-center mx-auto"
-              >
-                {t("services-1-button")}
-                <div className="h-8 animate-bounce" style={{ rotate: "90deg" }}>
-                  <FaArrowUp size={16} />
-                </div>
-              </Link>
-            </div>
-            <div className="flex flex-col gap-2 items-start rounded-md text-white p-4">
-              <div className="flex flex-row items-center justify-between w-full">
-                <h1 className="text-3xl font-bold text-center">{t("services-2-title")}</h1>
-              </div>
-              <div className="relative h-48 w-full">
-                <Image priority src={website} alt="Website Image" className="absolute" fill style={{ objectFit: "contain" }} />
-              </div>
-              <p>{t("services-2-text")}</p>
-              <Link href={"/services/web/web-design"} className="bg-black text-white rounded-md pr-8 pl-4 py-2 mt-4 flex flex-row gap-1 items-center mx-auto">
-                {t("services-1-button")}
-                <div className="h-8 animate-bounce" style={{ rotate: "90deg" }}>
-                  <FaArrowUp size={16} />
-                </div>
-              </Link>
-            </div>
-            <div className="flex flex-col gap-2 items-start rounded-md text-white p-4">
-              <div className="flex flex-row items-center justify-between w-full">
-                <h1 className="text-3xl font-bold text-center">{t("services-3-title")}</h1>
-              </div>
-              <div className="relative h-48 w-full">
-                <Image priority src={design} alt="Design Image" className="absolute" fill style={{ objectFit: "contain" }} />
-              </div>
-              <p className="px-2">{t("services-3-text")}</p>
-              <Link
-                href={"/services/brand-identity/design"}
-                className="bg-black text-white rounded-md pr-8 pl-4 py-2 mt-4 flex flex-row gap-1 items-center mx-auto"
-              >
-                {t("services-1-button")}
-                <div className="h-8 animate-bounce" style={{ rotate: "90deg" }}>
-                  <FaArrowUp size={16} />
-                </div>
-              </Link>
-            </div>
+          <div className="grid grid-cols-1 gap-12 w-full">
+            <Service
+              text={t("services-1-text")}
+              title={t("services-1-title")}
+              image={marketing}
+              buttonText={t("services-1-button")}
+              href={"/services/marketing/social-media"}
+              alt={"Marketing Image"}
+            />
+            <Service
+              right
+              text={t("services-2-text")}
+              title={t("services-2-title")}
+              image={website}
+              buttonText={t("services-1-button")}
+              href={"/services/web/web-design"}
+              alt={"Website Image"}
+            />
+            <Service
+              text={t("services-3-text")}
+              title={t("services-3-title")}
+              image={design}
+              buttonText={t("services-1-button")}
+              href={"/services/brand-identity/design"}
+              alt={"Design Image"}
+            />
           </div>
         </div>
       </BoxDiv>

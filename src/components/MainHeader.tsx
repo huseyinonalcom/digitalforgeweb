@@ -63,7 +63,7 @@ export const MainHeader = () => {
         </div>
         <div className="hidden lg:flex flex-row items-center justify-around gap-12 2xl:gap-20">
           <HeaderLink href={"/"} text={t("homepage")} />
-          <HeaderLink href={"/projects"} text={t("projects")} />
+          {/* <HeaderLink href={"/projects"} text={t("projects")} /> */}
           <AccordionTop title={t("services")}>
             <Accordion title={t("marketing")}>
               <HeaderLink href={"/services/marketing/social-media"} text={t("social-media")} />
@@ -83,8 +83,8 @@ export const MainHeader = () => {
               <HeaderLink href={"/services/brand-identity/catalogue"} text={t("catalogue-title")} />
             </Accordion>
           </AccordionTop>
-          <HeaderLink href={"/references"} text={t("references")} />
-          <HeaderLink href={"/about"} text={t("about-us")} />
+          {/* <HeaderLink href={"/references"} text={t("references")} /> */}
+          {/* <HeaderLink href={"/about"} text={t("about-us")} /> */}
           <HeaderLink href={"/contact"} text={t("contact")} />
           <a className="text-white flex flex-col items-end text-[15px]" href="tel:+32494550687">
             <p>{t("reach-us")}</p>

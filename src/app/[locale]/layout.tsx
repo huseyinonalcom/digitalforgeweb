@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { MainHeader } from "@/components/MainHeader";
 import { ReactNode } from "react";
 import { BoxDiv } from "@/components/containers/box-div";
-import Contact from "./contact/page";
+import Contact from "../../components/contact";
 
 type Props = {
   children: ReactNode;

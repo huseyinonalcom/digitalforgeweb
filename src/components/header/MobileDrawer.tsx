@@ -56,7 +56,7 @@ export const MobileDrawer = () => {
             X
           </button>
           <HeaderLink href={"/"} text={t("homepage")} />
-          <HeaderLink href={"/projects"} text={t("projects")} />
+          {/* <HeaderLink href={"/projects"} text={t("projects")} /> */}
           <Accordion title={t("services")} expanded={expanded === "services"} onClick={() => setExpanded((pe) => (pe === "services" ? null : "services"))}>
             <Accordion
               title={t("marketing")}
@@ -80,8 +80,8 @@ export const MobileDrawer = () => {
               <HeaderLink href={"/services/brand-identity/catalogue"} text={t("catalogue-title")} />
             </Accordion>
           </Accordion>
-          <HeaderLink href={"/references"} text={t("references")} />
-          <HeaderLink href={"/about"} text={t("about-us")} />
+          {/* <HeaderLink href={"/references"} text={t("references")} /> */}
+          {/* <HeaderLink href={"/about"} text={t("about-us")} /> */}
           <HeaderLink href={"/contact"} text={t("contact")} />
         </div>
       </div>
