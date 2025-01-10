@@ -59,7 +59,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col w-full items-center bg-[#d15742]">
+    <div className="flex flex-col w-full items-center bg-red-500">
       <AnimatedBackground />
       <BoxDiv className="min-h-[70vh] relative">
         <Image priority src={bannerone} alt="Digital Forge Banner" className="w-full absolute -z-10" fill style={{ objectFit: "cover" }} />
@@ -88,7 +88,10 @@ export default function Home() {
                 <Image priority src={marketing} alt="Marketing Image" className="absolute" fill style={{ objectFit: "contain" }} />
               </div>
               <p>{t("services-1-text")}</p>
-              <Link href={"/marketing"} className="bg-black text-white rounded-md pr-8 pl-4 py-2 mt-4 flex flex-row gap-1 items-center mx-auto">
+              <Link
+                href={"/services/marketing/social-media"}
+                className="bg-black text-white rounded-md pr-8 pl-4 py-2 mt-4 flex flex-row gap-1 items-center mx-auto"
+              >
                 {t("services-1-button")}
                 <div className="h-8 animate-bounce" style={{ rotate: "90deg" }}>
                   <FaArrowUp size={16} />
@@ -103,7 +106,7 @@ export default function Home() {
                 <Image priority src={website} alt="Website Image" className="absolute" fill style={{ objectFit: "contain" }} />
               </div>
               <p>{t("services-2-text")}</p>
-              <Link href={"/website"} className="bg-black text-white rounded-md pr-8 pl-4 py-2 mt-4 flex flex-row gap-1 items-center mx-auto">
+              <Link href={"/services/web/web-design"} className="bg-black text-white rounded-md pr-8 pl-4 py-2 mt-4 flex flex-row gap-1 items-center mx-auto">
                 {t("services-1-button")}
                 <div className="h-8 animate-bounce" style={{ rotate: "90deg" }}>
                   <FaArrowUp size={16} />
@@ -118,7 +121,10 @@ export default function Home() {
                 <Image priority src={design} alt="Design Image" className="absolute" fill style={{ objectFit: "contain" }} />
               </div>
               <p className="px-2">{t("services-3-text")}</p>
-              <Link href={"/design"} className="bg-black text-white rounded-md pr-8 pl-4 py-2 mt-4 flex flex-row gap-1 items-center mx-auto">
+              <Link
+                href={"/services/brand-identity/design"}
+                className="bg-black text-white rounded-md pr-8 pl-4 py-2 mt-4 flex flex-row gap-1 items-center mx-auto"
+              >
                 {t("services-1-button")}
                 <div className="h-8 animate-bounce" style={{ rotate: "90deg" }}>
                   <FaArrowUp size={16} />

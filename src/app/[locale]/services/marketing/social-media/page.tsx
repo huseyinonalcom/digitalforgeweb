@@ -16,7 +16,7 @@ export default function Services() {
         />
         <div className="h-full flex flex-col items-center justify-center">
           <div className="flex flex-col items-start justify-center p-4">
-            <h3 className="text-red-500 font-semibold">/{t("marketing")}</h3>
+            <h3 className="text-red-500 font-semibold">{t("marketing")}</h3>
             <h1 className="text-5xl font-bold text-white">{t("social-media-title")}</h1>
           </div>
         </div>

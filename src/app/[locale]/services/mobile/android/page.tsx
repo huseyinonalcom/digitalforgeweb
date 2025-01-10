@@ -9,7 +9,7 @@ export default function Services() {
         <Image priority src="/assets/images/services/android.jpg" alt="Android" className="-z-10" fill style={{ objectFit: "cover", objectPosition: "top" }} />
         <div className="h-full flex flex-col items-center justify-center">
           <div className="flex flex-col items-start justify-center p-4">
-            <h3 className="text-red-500 font-semibold">/{t("mobile-services")}</h3>
+            <h3 className="text-red-500 font-semibold">{t("mobile-services")}</h3>
             <h1 className="text-5xl font-bold text-white">{t("android-title")}</h1>
           </div>
         </div>
