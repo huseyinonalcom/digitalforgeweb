@@ -8,16 +8,16 @@ export default function Services() {
       <div className="w-full h-[500px] relative">
         <Image
           priority
-          src="/assets/images/services/e-commerce.jpg"
-          alt="E-Commerce"
+          src="/assets/images/services/socialmedia.jpg"
+          alt="Social Media"
           className="-z-10"
           fill
           style={{ objectFit: "cover", objectPosition: "top" }}
         />
         <div className="h-full flex flex-col items-center justify-center">
           <div className="flex flex-col items-start justify-center p-4">
-            <h3 className="text-red-500 font-semibold">/{t("web-services")}</h3>
-            <h1 className="text-5xl font-bold text-white">{t("e-commerce-title")}</h1>
+            <h3 className="text-red-500 font-semibold">/{t("marketing-services")}</h3>
+            <h1 className="text-5xl font-bold text-white">{t("social-media-title")}</h1>
           </div>
         </div>
       </div>
@@ -51,10 +51,10 @@ export default function Services() {
             değişikliklerin sizi toz içinde bırakmasına izin vermeyin.
           </p>
           <p>
-            Neirt sosyal medya danışmanları, ilgili, ilgi çekici ve sonuç odaklı sosyal medya varlığınızı mümkün kılar. Amaç ve hedeflerinizi tam olarak anlamak
+            DigitalForge sosyal medya danışmanları, ilgili, ilgi çekici ve sonuç odaklı sosyal medya varlığınızı mümkün kılar. Amaç ve hedeflerinizi tam olarak anlamak
             için size danışırız daha sonra bunları geliştirmek için bir strateji belirleriz. Bu, en etkili anahtar kelime stratejisini geliştirmek, kitlenizin
             en muhtemel olduğu kanalları vurgulamak ve kişiye özel çözümler geliştirmek için kapsamlı araştırmaları içerir. Sosyal stratejinizi şekillendiren
-            ölçümleri izliyor, ölçüyor ve rapor ediyoruz. Neirt, markanızın çevrimiçi varlığını geliştirmek için ihtiyaç duyduğu çözümleri sunar.
+            ölçümleri izliyor, ölçüyor ve rapor ediyoruz. DigitalForge, markanızın çevrimiçi varlığını geliştirmek için ihtiyaç duyduğu çözümleri sunar.
           </p>
           <p>
             Hiç şüphesiz, sosyal medya dijital pazarlama ortamlarından biri haline geldi, ancak birçok işletme bunun kaynakları basitleştirdiğini ve ölçülebilir

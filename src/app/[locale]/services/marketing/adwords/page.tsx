@@ -6,18 +6,11 @@ export default function Services() {
   return (
     <div className="w-full flex flex-col items-center">
       <div className="w-full h-[500px] relative">
-        <Image
-          priority
-          src="/assets/images/services/e-commerce.jpg"
-          alt="E-Commerce"
-          className="-z-10"
-          fill
-          style={{ objectFit: "cover", objectPosition: "top" }}
-        />
+        <Image priority src="/assets/images/services/adwords.jpg" alt="AdWords" className="-z-10" fill style={{ objectFit: "cover", objectPosition: "top" }} />
         <div className="h-full flex flex-col items-center justify-center">
           <div className="flex flex-col items-start justify-center p-4">
-            <h3 className="text-red-500 font-semibold">/{t("web-services")}</h3>
-            <h1 className="text-5xl font-bold text-white">{t("e-commerce-title")}</h1>
+            <h3 className="text-red-500 font-semibold">/{t("marketing-services")}</h3>
+            <h1 className="text-5xl font-bold text-white">{t("adwords-title")}</h1>
           </div>
         </div>
       </div>
@@ -30,7 +23,7 @@ export default function Services() {
           </p>
           <p>
             Çevrimiçi etkileşim ve iletişimlere gittikçe daha fazla önem verildiğinden, işletmeler mevcut muazzam potansiyel çevrimiçi reklam fırsatlarını
-            gerçekleştirmeye başlıyor. Neirt’te, özel Google Adwords Reklam yöneticilerimiz bütçeniz içerisinde maksimum sonuç almak için çalışıyor.
+            gerçekleştirmeye başlıyor. DigitalForge’te, özel Google Adwords Reklam yöneticilerimiz bütçeniz içerisinde maksimum sonuç almak için çalışıyor.
             İşletmelerinizin benzersiz kampanyasında daimi iyileştirmeler oluşturmak için işinizle yakından ilgileniyoruz.
           </p>
           <p>
@@ -43,7 +36,7 @@ export default function Services() {
           </p>
           <p>
             Google, reklam kampanyasındaki her anahtar kelimeye bir kalite puanı atar. Kalite puanı, Google aramadaki en üst konumda bulunan bir reklamın
-            tıklama başına maliyetini kısmen belirler. Reklam kampanyalarınızın kalite puanını artırmak istiyorsanız, Neirt size yardımcı olabilir. Tıklama
+            tıklama başına maliyetini kısmen belirler. Reklam kampanyalarınızın kalite puanını artırmak istiyorsanız, DigitalForge size yardımcı olabilir. Tıklama
             oranını ve çevrimiçi dönüşüm oranını iyileştirmek için reklam alaka düzeyi ve açılış sayfası içeriğini optimize ederek, Adwords uzmanlarımız
             hesabınıza ilişkin kalite puanını artırabilir ve bu sayede web sitenize en nitelikli ziyaretleri yapmanızı sağlar.
           </p>

@@ -8,16 +8,16 @@ export default function Services() {
       <div className="w-full h-[500px] relative">
         <Image
           priority
-          src="/assets/images/services/e-commerce.jpg"
-          alt="E-Commerce"
+          src="/assets/images/services/catalogue.jpg"
+          alt="Catalogue"
           className="-z-10"
           fill
           style={{ objectFit: "cover", objectPosition: "top" }}
         />
         <div className="h-full flex flex-col items-center justify-center">
           <div className="flex flex-col items-start justify-center p-4">
-            <h3 className="text-red-500 font-semibold">/{t("web-services")}</h3>
-            <h1 className="text-5xl font-bold text-white">{t("e-commerce-title")}</h1>
+            <h3 className="text-red-500 font-semibold">/{t("brand-services")}</h3>
+            <h1 className="text-5xl font-bold text-white">{t("catalogue-title")}</h1>
           </div>
         </div>
       </div>
