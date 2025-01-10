@@ -1,7 +1,4 @@
-import { useTranslations } from "next-intl";
-
 export default function Services() {
-  const t = useTranslations();
   return (
     <div className="flex flex-col w-full items-start p-8 bg-white">
       <h1 style={{ color: "#222", textAlign: "center", fontSize: "28px" }}>Privacy Policy</h1>

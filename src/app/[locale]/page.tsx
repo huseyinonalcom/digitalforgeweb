@@ -11,7 +11,6 @@ import { FaArrowUp, FaWhatsapp } from "react-icons/fa";
 import { useTranslations } from "next-intl";
 import { BiMailSend } from "react-icons/bi";
 import { Link } from "@/i18n/routing";
-import Contact from "./contact/page";
 import Image from "next/image";
 
 export default function Home() {
