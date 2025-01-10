@@ -1,156 +1,83 @@
 import { useTranslations } from "next-intl";
-
-const Title = ({ text }: { text: string }) => {
-  return (
-    <h2 className="text-2xl font-semibold pt-4" id={text.replace(/\s+/g, "-").toLowerCase()}>
-      {text}
-    </h2>
-  );
-};
-
-const SubTitle = ({ text }: { text: string }) => {
-  return <h3 className="pl-4 text-xl font-semibold">{text}</h3>;
-};
-const Text = ({ text }: { text: string }) => {
-  return <p className="pl-8 text-justify font-medium">{text}</p>;
-};
+import Image from "next/image";
 
 export default function Services() {
   const t = useTranslations();
   return (
-    <div className="flex flex-col w-full items-center p-8 bg-white">
-      <h1 className="text-5xl font-bold mx-auto">{t("services-title")}</h1>
-      <div className="flex flex-row w-full max-w-[1500px] items-start justify-between">
-        <div className="flex flex-col w-full max-w-[1000px] gap-6 items-start justify-center">
-          <Title text={t("service-1-title")} />
-          <Text text={t("service-1-text")} />
-
-          <Title text={t("service-2-title")} />
-          <Text text={t("service-2-text")} />
-
-          <Title text={t("service-3-title")} />
-          <Text text={t("service-3-text")} />
-
-          <Title text={t("service-4-title")} />
-          <Text text={t("service-4-text")} />
-
-          <Title text={t("service-5-title")} />
-          <Text text={t("service-5-text")} />
-
-          <Title text={t("service-6-title")} />
-          <Text text={t("service-6-text")} />
-
-          <Title text={t("service-7-title")} />
-          <SubTitle text={t("service-7-subtitle-1")} />
-          <Text text={t("service-7-subtext-1")} />
-          <SubTitle text={t("service-7-subtitle-2")} />
-          <Text text={t("service-7-subtext-2")} />
-          <SubTitle text={t("service-7-subtitle-3")} />
-          <Text text={t("service-7-subtext-3")} />
-          <SubTitle text={t("service-7-subtitle-4")} />
-          <Text text={t("service-7-subtext-4")} />
-
-          <Title text={t("service-8-title")} />
-          <SubTitle text={t("service-8-subtitle-1")} />
-          <Text text={t("service-8-subtext-1")} />
-          <SubTitle text={t("service-8-subtitle-2")} />
-          <Text text={t("service-8-subtext-2")} />
-          <SubTitle text={t("service-8-subtitle-3")} />
-          <Text text={t("service-8-subtext-3")} />
-          <SubTitle text={t("service-8-subtitle-4")} />
-          <Text text={t("service-8-subtext-4")} />
-
-          <Title text={t("service-9-title")} />
-          <SubTitle text={t("service-9-subtitle-1")} />
-          <Text text={t("service-9-subtext-1")} />
-          <SubTitle text={t("service-9-subtitle-2")} />
-          <Text text={t("service-9-subtext-2")} />
-          <SubTitle text={t("service-9-subtitle-3")} />
-          <Text text={t("service-9-subtext-3")} />
-          <SubTitle text={t("service-9-subtitle-4")} />
-          <Text text={t("service-9-subtext-4")} />
-          <SubTitle text={t("service-9-subtitle-5")} />
-          <Text text={t("service-9-subtext-5")} />
-
-          <Title text={t("service-10-title")} />
-          <SubTitle text={t("service-10-subtitle-1")} />
-          <Text text={t("service-10-subtext-1")} />
-          <SubTitle text={t("service-10-subtitle-2")} />
-          <Text text={t("service-10-subtext-2")} />
-          <SubTitle text={t("service-10-subtitle-3")} />
-          <Text text={t("service-10-subtext-3")} />
-
-          <Title text={t("service-11-title")} />
-          <SubTitle text={t("service-11-subtitle-1")} />
-          <Text text={t("service-11-subtext-1")} />
-          <SubTitle text={t("service-11-subtitle-2")} />
-          <Text text={t("service-11-subtext-2")} />
-          <SubTitle text={t("service-11-subtitle-3")} />
-          <Text text={t("service-11-subtext-3")} />
-          <SubTitle text={t("service-11-subtitle-4")} />
-          <Text text={t("service-11-subtext-4")} />
-
-          <Title text={t("service-12-title")} />
-          <SubTitle text={t("service-12-subtitle-1")} />
-          <Text text={t("service-12-subtext-1")} />
-          <SubTitle text={t("service-12-subtitle-2")} />
-          <Text text={t("service-12-subtext-2")} />
-
-          <Title text={t("service-13-title")} />
-          <SubTitle text={t("service-13-subtitle-1")} />
-          <Text text={t("service-13-subtext-1")} />
-          <SubTitle text={t("service-13-subtitle-2")} />
-          <Text text={t("service-13-subtext-2")} />
-
-          <Title text={t("service-14-title")} />
-          <SubTitle text={t("service-14-subtitle-1")} />
-          <Text text={t("service-14-subtext-1")} />
-          <SubTitle text={t("service-14-subtitle-2")} />
-          <Text text={t("service-14-subtext-2")} />
-          <SubTitle text={t("service-14-subtitle-3")} />
-          <Text text={t("service-14-subtext-3")} />
-          <SubTitle text={t("service-14-subtitle-4")} />
-          <Text text={t("service-14-subtext-4")} />
-          <SubTitle text={t("service-14-subtitle-5")} />
-          <Text text={t("service-14-subtext-5")} />
-
-          <Title text={t("service-15-title")} />
-          <SubTitle text={t("service-15-subtitle-1")} />
-          <Text text={t("service-15-subtext-1")} />
-          <SubTitle text={t("service-15-subtitle-2")} />
-          <Text text={t("service-15-subtext-2")} />
-          <SubTitle text={t("service-15-subtitle-3")} />
-          <Text text={t("service-15-subtext-3")} />
-          <SubTitle text={t("service-15-subtitle-4")} />
-          <Text text={t("service-15-subtext-4")} />
-          <SubTitle text={t("service-15-subtitle-5")} />
-          <Text text={t("service-15-subtext-5")} />
-
-          <Title text={t("service-16-title")} />
-          <SubTitle text={t("service-16-subtitle-1")} />
-          <Text text={t("service-16-subtext-1")} />
-          <SubTitle text={t("service-16-subtitle-2")} />
-          <Text text={t("service-16-subtext-2")} />
-          <SubTitle text={t("service-16-subtitle-3")} />
-          <Text text={t("service-16-subtext-3")} />
-          <SubTitle text={t("service-16-subtitle-4")} />
-          <Text text={t("service-16-subtext-4")} />
-          <SubTitle text={t("service-16-subtitle-5")} />
-          <Text text={t("service-16-subtext-5")} />
+    <div className="w-full flex flex-col items-center">
+      <div className="w-full h-[500px] relative">
+        <Image
+          priority
+          src="/assets/images/services/e-commerce.jpg"
+          alt="E-Commerce"
+          className="-z-10"
+          fill
+          style={{ objectFit: "cover", objectPosition: "top" }}
+        />
+        <div className="h-full flex flex-col items-center justify-center">
+          <div className="flex flex-col items-start justify-center p-4">
+            <h3 className="text-red-500 font-semibold">/{t("web-services")}</h3>
+            <h1 className="text-5xl font-bold text-white">{t("e-commerce-title")}</h1>
+          </div>
         </div>
-        <nav className="flex flex-col sticky top-10 gap-4 text-right w-full max-w-[300px] items-end">
-          {Array.from({ length: 16 }, (_, i) => (
-            <a
-              href={`#${t(`service-${i + 1}-title`)
-                .replace(/\s+/g, "-")
-                .toLowerCase()}`}
-              className="nav-link"
-              key={i}
-            >
-              {t(`service-${i + 1}-title`)}
-            </a>
-          ))}
-        </nav>
+      </div>
+      <div className="w-full bg-white flex flex-col items-center">
+        <div className="flex flex-col gap-4 w-full items-center p-8 max-w-screen-2xl">
+          <p>
+            Günümüzde hiç şüphesiz Android işletim sistemleri mobil cihazlar için tartışmasız en popüler platformlardan bir tanesidir. Android işletim sistemi
+            tüm interneti, tablet, akıllı telefon ve diğer bütün mobil cihazlar için kullanıcıya uygun bir hale getirmektedir. Bu süreç içerisinde birbirimizle
+            iletişim kurma biçimimizi değiştirmektedir.
+          </p>
+          <p>
+            <strong>Android Mobil Uygulama Hakkında</strong>
+            <br />
+            Android mobil uygulama konusunda neredeyse bütün kullanım alanı içerisindedir diyebiliriz. Ev ortamı içerisinde, ofiste, kameralarımızda,
+            saatlerimizde, arabalarımızın içerisinde ve hatta TV’lerin içerisinde dahi Android bulunuyor diyebiliriz. Uygulama geliştiriciliği ile uğraşmakta
+            olan kişiler için Android, akla gelebilecek her türlü uygulamayı geliştirmek için heyecan verici fırsatların sunmakta olan açık bir platformdur. Her
+            geçen zaman dilimi içerisinde kullanıcı sayısını artırmakta olan bir tabana sahip olan Android, yeni uygulamarı dağıtmak için yeroleşik bir açık
+            Pazar alanına sahiptir. Yüzlerce uygulamanız var olsun ya da olmasın, Android platformu sayesinde mobil iletişimin gücünü yakalamanız için benzeri
+            görülmemiş fırsatları yakalayacaksınız.
+          </p>
+          <p>
+            Java, özellikle Android platformunun altını önemle çizmektedir. Bundan dolayı firmamız içerisinde çalışmakta olan Java konusunda uzman olan teknik
+            arkadaşlarımız Android telefonlarında ve diğer cihazlarınız içerisinde kusursuz bir şekilde performans gösterecek olan uygulamak geliştirmek adına
+            geniş tabanlı Java kaynaklarını kullanabilmektedirler. Siz değerli müşterilerimiz için sorunsuz bir şekilde çalışmakta olan uygulamalar geliştirmek
+            son derece önem verdiğimiz bir konudur. Bu hizmetlerimizden son derece memnun kalacağınızı belirtebiliriz.
+          </p>
+          <p>
+            <strong>Firmamız Hakkında Bazı Bilgiler</strong>
+            <br />
+            Android mobil uygulama geliştirme konusunda kendini geliştirmekte olan firmamız bünyesi içerisinde çalışmakta olan deneyimli elemanlar sayesinde
+            Android uygulamalarını oldukça rahat bir şekilde geliştiriciliğini üstlenebilmektedirler. Android Emulator. Android eklenti araçları (ADT) ve diğer
+            son derece değerli mobil uygulamalarını geliştirmek adına kullanılmakta olan araçlarını içermekte olan Android Yazılım Geliştirme Kitini oldukça
+            rahat ve profesyonel bir biçimde kullanabilmektedirler. Bu araçlar iyi bir ortam içerisinde kullanılır ve mobil uygulama geliştiriciliği içerisinde
+            iş gereksinimlerinizin en iyi şekilde karşılayan sürekli olarak yüksek performans sağlayan mobil uygulamalar oluşturmanıza oldukça yardım edecektir.
+            Firmamız içerisinde üretimini gerçekleştirdiğimiz mobil uygulamaları kusursuz bir şekilde kullanabilirsiniz.
+          </p>
+          <p>
+            <strong>Android Mobil Uygulamaları Geliştirme Sonrası Süreç</strong>
+            <br />
+            Android mobil uygulamaları içerisinde geliştirme işlemlerini tamamlamış olduğumuz programların birinci sınıf bir şekilde açık pazara açık erişime
+            hazır olduğunu söyleyebiliriz. Google Play, sizlere ait olan şirketinizin Google Play üzerinde yeni bir uygulama yayınladığınız zaman dünyada
+            Android sisteme sahip olan ve Google Play kullanan milyonlarca kullanıcıya erişim olanağı sunmaktadır. Aynı zaman içerisinde kontrolün sizlerin
+            elinde kalmasına yardımcı olmaktadır. Bunun nedeni Google Play sizlere ait olan uygulamalarınızı nasıl satacağınıza karar vermeniz amacıyla sizlere
+            izin vermektedir. Ne zaman ya da kaç uygulamaya sahip olacağınız konusunda herhangi bir şekilde sizlere bir kısıtlama getirmemektedir. Hangi müşteri
+            gruplarına satış gerçekleştirdiğiniz gibi kontrol işlemleri her daim sizlerin elinde durmaktadır.
+          </p>
+          <p>
+            Google Play üzerinde kullanıma sunmuş olduğunuz uygulamalarınız direkt olarak kullanıcılara ulaştığından dolayı herhangi bir şekilde gecikme olmaz
+            ve kullanıcılar indirdikleri gibi uygulamanızı kullanabilmektedirler.
+          </p>
+          <p>
+            Google Play içerisinde bir uygulama yayınlandığınız zaman ücretsiz bir şekilde mi sunum yapacağınızın ya da belli bir miktar ücret ile mi satılacağı
+            gibi konular da karar vermek sizlerin elindedir. Ayrıca uygulama geliştirici olarak sizler gerektiği zaman satış içerisinde kullanılacak para
+            birimini ve satış miktarını değiştirme haklarına sahip olmaktasınız.
+          </p>
+          <p>
+            Firma olarak biz sizlere bu süreçler içerisinde; Sunucu uygulama geliştirici, Android ahize test çözümleri, Google Play üzerinde uygulama sunumu,
+            Özel uygulama geliştirme gibi birçok konuda hizmet ve destek sunmaktayız.&nbsp;
+          </p>{" "}
+        </div>
       </div>
     </div>
   );

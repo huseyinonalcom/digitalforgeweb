@@ -30,27 +30,27 @@ export const MainHeader = () => {
 
   return (
     <header className="shadow px-6 z-50 sticky top-0 bg-black/20">
-        <div className="max-w-[1920px] min-h-20 py-1 mx-auto items-center flex flex-row justify-center gap-12">
-          <div className="flex flex-row items-center justify-start lg:justify-center">
-            <NavLink href={`/`}>
-              <Image priority src={dflogo} alt="Digital Forge Logo" className="w-48" />
-            </NavLink>
-          </div>
-          <div className="hidden lg:flex flex-row items-center justify-around gap-12 2xl:gap-20">
-            {links1.map((link1) => (
-              <HeaderLink key={link1.href} href={link1.href} text={link1.text} />
-            ))}
-            {links2.map((link2) => (
-              <HeaderLink key={link2.href} href={link2.href} text={link2.text} />
-            ))}
-            <a className="text-white flex flex-col items-end text-[15px]" href="tel:+32494550687">
-              <p>{t("reach-us")}</p>
-              <strong className="h-[27px]">+32 494 55 06 87</strong>
-            </a>
-            <LanguageSwitcher />
-          </div>
-          <MobileDrawer links={[...links1, ...links2]} />
+      <div className="max-w-[1920px] min-h-20 py-1 mx-auto items-center flex flex-row justify-center gap-12">
+        <div className="flex flex-row items-center justify-start lg:justify-center">
+          <NavLink href={`/`}>
+            <Image priority src={dflogo} alt="Digital Forge Logo" className="w-48" />
+          </NavLink>
         </div>
+        <div className="hidden lg:flex flex-row items-center justify-around gap-12 2xl:gap-20">
+          {links1.map((link1) => (
+            <HeaderLink key={link1.href} href={link1.href} text={link1.text} />
+          ))}
+          {links2.map((link2) => (
+            <HeaderLink key={link2.href} href={link2.href} text={link2.text} />
+          ))}
+          <a className="text-white flex flex-col items-end text-[15px]" href="tel:+32494550687">
+            <p>{t("reach-us")}</p>
+            <strong className="h-[27px]">+32 494 55 06 87</strong>
+          </a>
+          <LanguageSwitcher />
+        </div>
+        <MobileDrawer />
+      </div>
     </header>
   );
 };

@@ -1,156 +1,87 @@
 import { useTranslations } from "next-intl";
-
-const Title = ({ text }: { text: string }) => {
-  return (
-    <h2 className="text-2xl font-semibold pt-4" id={text.replace(/\s+/g, "-").toLowerCase()}>
-      {text}
-    </h2>
-  );
-};
-
-const SubTitle = ({ text }: { text: string }) => {
-  return <h3 className="pl-4 text-xl font-semibold">{text}</h3>;
-};
-const Text = ({ text }: { text: string }) => {
-  return <p className="pl-8 text-justify font-medium">{text}</p>;
-};
+import Image from "next/image";
 
 export default function Services() {
   const t = useTranslations();
   return (
-    <div className="flex flex-col w-full items-center p-8 bg-white">
-      <h1 className="text-5xl font-bold mx-auto">{t("services-title")}</h1>
-      <div className="flex flex-row w-full max-w-[1500px] items-start justify-between">
-        <div className="flex flex-col w-full max-w-[1000px] gap-6 items-start justify-center">
-          <Title text={t("service-1-title")} />
-          <Text text={t("service-1-text")} />
-
-          <Title text={t("service-2-title")} />
-          <Text text={t("service-2-text")} />
-
-          <Title text={t("service-3-title")} />
-          <Text text={t("service-3-text")} />
-
-          <Title text={t("service-4-title")} />
-          <Text text={t("service-4-text")} />
-
-          <Title text={t("service-5-title")} />
-          <Text text={t("service-5-text")} />
-
-          <Title text={t("service-6-title")} />
-          <Text text={t("service-6-text")} />
-
-          <Title text={t("service-7-title")} />
-          <SubTitle text={t("service-7-subtitle-1")} />
-          <Text text={t("service-7-subtext-1")} />
-          <SubTitle text={t("service-7-subtitle-2")} />
-          <Text text={t("service-7-subtext-2")} />
-          <SubTitle text={t("service-7-subtitle-3")} />
-          <Text text={t("service-7-subtext-3")} />
-          <SubTitle text={t("service-7-subtitle-4")} />
-          <Text text={t("service-7-subtext-4")} />
-
-          <Title text={t("service-8-title")} />
-          <SubTitle text={t("service-8-subtitle-1")} />
-          <Text text={t("service-8-subtext-1")} />
-          <SubTitle text={t("service-8-subtitle-2")} />
-          <Text text={t("service-8-subtext-2")} />
-          <SubTitle text={t("service-8-subtitle-3")} />
-          <Text text={t("service-8-subtext-3")} />
-          <SubTitle text={t("service-8-subtitle-4")} />
-          <Text text={t("service-8-subtext-4")} />
-
-          <Title text={t("service-9-title")} />
-          <SubTitle text={t("service-9-subtitle-1")} />
-          <Text text={t("service-9-subtext-1")} />
-          <SubTitle text={t("service-9-subtitle-2")} />
-          <Text text={t("service-9-subtext-2")} />
-          <SubTitle text={t("service-9-subtitle-3")} />
-          <Text text={t("service-9-subtext-3")} />
-          <SubTitle text={t("service-9-subtitle-4")} />
-          <Text text={t("service-9-subtext-4")} />
-          <SubTitle text={t("service-9-subtitle-5")} />
-          <Text text={t("service-9-subtext-5")} />
-
-          <Title text={t("service-10-title")} />
-          <SubTitle text={t("service-10-subtitle-1")} />
-          <Text text={t("service-10-subtext-1")} />
-          <SubTitle text={t("service-10-subtitle-2")} />
-          <Text text={t("service-10-subtext-2")} />
-          <SubTitle text={t("service-10-subtitle-3")} />
-          <Text text={t("service-10-subtext-3")} />
-
-          <Title text={t("service-11-title")} />
-          <SubTitle text={t("service-11-subtitle-1")} />
-          <Text text={t("service-11-subtext-1")} />
-          <SubTitle text={t("service-11-subtitle-2")} />
-          <Text text={t("service-11-subtext-2")} />
-          <SubTitle text={t("service-11-subtitle-3")} />
-          <Text text={t("service-11-subtext-3")} />
-          <SubTitle text={t("service-11-subtitle-4")} />
-          <Text text={t("service-11-subtext-4")} />
-
-          <Title text={t("service-12-title")} />
-          <SubTitle text={t("service-12-subtitle-1")} />
-          <Text text={t("service-12-subtext-1")} />
-          <SubTitle text={t("service-12-subtitle-2")} />
-          <Text text={t("service-12-subtext-2")} />
-
-          <Title text={t("service-13-title")} />
-          <SubTitle text={t("service-13-subtitle-1")} />
-          <Text text={t("service-13-subtext-1")} />
-          <SubTitle text={t("service-13-subtitle-2")} />
-          <Text text={t("service-13-subtext-2")} />
-
-          <Title text={t("service-14-title")} />
-          <SubTitle text={t("service-14-subtitle-1")} />
-          <Text text={t("service-14-subtext-1")} />
-          <SubTitle text={t("service-14-subtitle-2")} />
-          <Text text={t("service-14-subtext-2")} />
-          <SubTitle text={t("service-14-subtitle-3")} />
-          <Text text={t("service-14-subtext-3")} />
-          <SubTitle text={t("service-14-subtitle-4")} />
-          <Text text={t("service-14-subtext-4")} />
-          <SubTitle text={t("service-14-subtitle-5")} />
-          <Text text={t("service-14-subtext-5")} />
-
-          <Title text={t("service-15-title")} />
-          <SubTitle text={t("service-15-subtitle-1")} />
-          <Text text={t("service-15-subtext-1")} />
-          <SubTitle text={t("service-15-subtitle-2")} />
-          <Text text={t("service-15-subtext-2")} />
-          <SubTitle text={t("service-15-subtitle-3")} />
-          <Text text={t("service-15-subtext-3")} />
-          <SubTitle text={t("service-15-subtitle-4")} />
-          <Text text={t("service-15-subtext-4")} />
-          <SubTitle text={t("service-15-subtitle-5")} />
-          <Text text={t("service-15-subtext-5")} />
-
-          <Title text={t("service-16-title")} />
-          <SubTitle text={t("service-16-subtitle-1")} />
-          <Text text={t("service-16-subtext-1")} />
-          <SubTitle text={t("service-16-subtitle-2")} />
-          <Text text={t("service-16-subtext-2")} />
-          <SubTitle text={t("service-16-subtitle-3")} />
-          <Text text={t("service-16-subtext-3")} />
-          <SubTitle text={t("service-16-subtitle-4")} />
-          <Text text={t("service-16-subtext-4")} />
-          <SubTitle text={t("service-16-subtitle-5")} />
-          <Text text={t("service-16-subtext-5")} />
+    <div className="w-full flex flex-col items-center">
+      <div className="w-full h-[500px] relative">
+        <Image
+          priority
+          src="/assets/images/services/e-commerce.jpg"
+          alt="E-Commerce"
+          className="-z-10"
+          fill
+          style={{ objectFit: "cover", objectPosition: "top" }}
+        />
+        <div className="h-full flex flex-col items-center justify-center">
+          <div className="flex flex-col items-start justify-center p-4">
+            <h3 className="text-red-500 font-semibold">/{t("web-services")}</h3>
+            <h1 className="text-5xl font-bold text-white">{t("e-commerce-title")}</h1>
+          </div>
         </div>
-        <nav className="flex flex-col sticky top-10 gap-4 text-right w-full max-w-[300px] items-end">
-          {Array.from({ length: 16 }, (_, i) => (
-            <a
-              href={`#${t(`service-${i + 1}-title`)
-                .replace(/\s+/g, "-")
-                .toLowerCase()}`}
-              className="nav-link"
-              key={i}
-            >
-              {t(`service-${i + 1}-title`)}
-            </a>
-          ))}
-        </nav>
+      </div>
+      <div className="w-full bg-white flex flex-col items-center">
+        <div className="flex flex-col gap-4 w-full items-center p-8 max-w-screen-2xl">
+          <p>
+            Markanız, işinizin özüdür. Bir şirketin <strong>kurumsal kimliği çalışması</strong>, kurumun özünü içine alan benzersiz bir ticari marka, renk
+            paleti, tema ve grafik görüntülerin tamamıdır. Logolar, sloganlar ve renkler, bir şirketi rakiplerinden farklı kılan kurumsal kimlik tasarım
+            paketlerinin bir parçasıdır. Marka kimliği tasarım hizmetlerinin önemli bir kısmı pazarlanabilirliktir. Bir ürün, kişi veya kuruluş, sosyal medyada
+            ve diğer iletişim kanallarında rahatlamak için tanımlanmış ve uyumlu bir marka stratejisine ihtiyaç duyar. Reklamlar, yazılar ve web tasarımı
+            sayesinde, marka kimliğinin etkili olması için aynı olması gerekir. Neirt olarak, marka kimliği tasarım uzmanlarımız, güzel ve etkili bir marka
+            kimliği oluşturduğumuz ve yarattığımız kurumsal kimlik tasarımı hizmetleri sunmak için şirketlerle yakın işbirliği içindedir.
+          </p>
+          <p>
+            Marka kimliği tasarım hizmetlerimizin bir parçası olarak, şirketler, reklam ve marka kullanımları için tam bir tasarım ve grafik görüntüleri paketi
+            alır. Bizimle çalışın, şirketinizin neyle ilgili olduğunu keşfetmenize yardımcı olacağız. Marka kültürünüz kurumsal markalaşma kimliğinin en önemli
+            parçalarından biridir. Çalışanlarınızı ve görev beyanınızı göstermeden kendinizi rakiplerinizden nasıl ayrı tutabileceksiniz? Şirketinizin doğasında
+            var olan marka kültürü, çalışanlarınızın ve işinizin bir karışımıdır, bir marka vaadiyle birlikte. Başarılı markaları ve garantili sonuçları ve ürün
+            memnuniyetini nasıl sunduğunu düşünün; Neirt’in marka kimliği tasarım hizmetleri ile elde edeceğiniz şey budur.
+          </p>
+          <p>
+            Kurumsal bir marka kimliğinde her şey görsellerle ilgilidir. Bir logo, resim veya reklam tüketicilerden duygusal bir tepki almalı ve şirketinize
+            bağlandıkları zihinsel bir imaj oluşturmalıdır. Yazı tipleri, tasarım, renkler, doku ve diğer grafik tasarım taktikleri, sizin ve sektörünüz için
+            mantıklı ve tutarlı bir kurumsal kimlik tasarımı oluşturmak için marka kimliği tasarım hizmetlerinize bağlanmak için kullanılır.
+          </p>
+          <p>
+            Neirt, markanızı belirlemede ve müşteri marka bilincini oluştururken size yardımcı olmamıza yardımcı olmak için pazarlama sektöründe lider
+            yönergeleri kullanır. Kurumsal kimlik tasarımı hizmetlerimizde, yeni şirketinizi kurmaya veya yepyeni kimliğinizi sadık müşterilerinize göstermeye
+            hazır olmanızı sağlayan eksiksiz bir tam paket hizmet kümesi sunuyoruz.
+          </p>
+          <p>
+            Demografik tanımlamaya benzer şekilde, kurumsal kimlik tasarımı hizmetlerinde hedef bir müşteri tanımlanması sonuçta çok önemlidir. Ürün veya
+            hizmetlerinizi kimlerin satın alma ihtimalinin yüksek olduğunu bulmak ve bunları ortak davranış ve özelliklerle ilişkilendirmek için pazar
+            araştırması uzmanlarını kullanıyoruz.
+          </p>
+          <p>
+            Kurumsal kimlik tasarımı paketinin en önemli kısımlarından biri logonuzdur.. Logonuz, müşterilerinizin logonuzu hizmetlerinizle zihinsel olarak
+            ilişkilendirmeleri için görsel bir ipucudur. Marka kimliği tasarım hizmetlerinde aradığınız sonuçları elde etmek için temiz, açık ve özlü olması
+            gerekir.
+          </p>
+          <p>
+            <strong>Neirt, markanız için ne sunar?</strong>
+            <br />
+            <strong>Akılda kalıcılık:</strong> Hedef kitlenizin aklında unutulmazsınız. Göze çarpmanızı ve tanınmanızı sağlarız.
+          </p>
+          <p>
+            <strong>Markalaşma:</strong> Kurumsal kimlik tasarımı hizmetlerimizden oluşturulmuş bir marka kimliği ile, markanız rakiplerinizden ayrışacak ve
+            şirketiniz için bir miras yaratacaktır.
+          </p>
+          <p>
+            <strong>Arzu yaratma:</strong> Duygu ve düşündürücü imajlar, grafikler sayesinde Neirt, şirketinize ürünleriniz ve hizmetleriniz için mükemmel marka
+            kimliği tasarım hizmetleri sayesinde arzu yaratma olanağı sağlar.
+          </p>
+          <p>
+            Kurumsal kimliği yaratan görsel varlıklar ve tasarım öğeleri doğru kullanılmalı ve güncel tutulmalıdır. Kurumsal kimlik yönetimi, tüm ilgili görsel
+            yönleri ve tasarım öğelerini kontrol etme ve yönetme ve tüm çalışanlar tarafından doğru kullanılmalarını sağlama sürecidir.
+          </p>
+          <p>
+            ‘Markanız’, şirketinizin pazarda oluşturduğu itibardır. Kişisel marka kimliği tasarımı hedef kitleye, ürün veya hizmet bağlayan güçlü bir iletişim
+            aracıdır. Bir Markalaşma ve Kimlik tasarımı yapıldığında, müşteri ile ürün veya hizmet arasında güçlü bir bağlantı oluşturur. Şirketin iş üretmesi
+            için gereken mesajları iletir. Mesaj, ‘Beni Satın Al’ ile ‘Rakipler arasından Beni Seç’ den herhangi bir şey olabilir. Müşterileri harekete geçmeye
+            teşvik etmek istiyorsanız, bu mesajı dikkatle iletmelisiniz.
+          </p>{" "}
+        </div>
       </div>
     </div>
   );
