@@ -10,12 +10,13 @@ import design from "../../../public/assets/images/design.png";
 import { ButtonColorOut } from "@/components/ButtonColorOut";
 import { NavLink } from "@/components/navigation/NavLink";
 import { BoxDiv } from "@/components/containers/box-div";
-import { FaArrowUp, FaWhatsapp } from "react-icons/fa";
+import { FaArrowUp } from "react-icons/fa";
 import { useTranslations } from "next-intl";
-import { BiMailSend } from "react-icons/bi";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
 
 const Service = ({
   title,
@@ -209,10 +210,12 @@ export default function Home() {
       </BoxDiv>
       <BoxDiv className="bg-white">
         <div className="grid max-w-[1500px] grid-cols-1 lg:grid-cols-3 mx-auto">
-          <div className="col-span-1 pr-4">
-            <h1 className="text-5xl font-black ml-auto">{t("why-us-title")}</h1>
-            <div className="relative w-full h-48">
-              <Image priority src={dflogo} alt="DigitalForge" className="absolute" fill style={{ objectFit: "contain" }} />
+          <div className="col-span-1 my-auto">
+            <h1 className="text-4xl font-black ml-auto">{t("why-us-title")}</h1>
+            <div className="pr-20">
+              <div className="relative w-full h-48">
+                <Image priority src={dflogo} alt="DigitalForge" className="absolute" fill style={{ objectFit: "contain" }} />
+              </div>
             </div>
           </div>
           <div className="col-span-2">
@@ -242,17 +245,17 @@ export default function Home() {
           </div>
         </div>
       </BoxDiv>
-      <BoxDiv className="relative w-full bg-black/90">
+      <BoxDiv className="relative w-full bg-white/90">
         <div className="flex flex-col lg:flex-row gap-6 justify-between items-center max-w-[1200px] mx-auto">
           <a href="https://api.whatsapp.com/send?phone=32494550687" target="_blank" rel="noreferrer" className="flex flex-row gap-2 items-center">
-            <FaWhatsapp size={128} className="h-12 w-12 lg:h-24 lg:w-24" color="#25d366" />
-            <p className="bg-gradient-to-r blur-xs from-[#25d366] py-2 to-teal-500 bg-clip-text text-xl lg:text-4xl box-content font-extrabold text-transparent text-center select-none">
+            <IoLogoWhatsapp size={128} className="h-12 w-12 lg:h-24 lg:w-24" color="#5a916e" />
+            <p className="bg-gradient-to-r blur-xs from-[#5a916e] py-2 to-teal-500 bg-clip-text text-xl lg:text-4xl box-content font-extrabold text-transparent text-center select-none">
               {t("contact-whatsapp")}
             </p>
           </a>
           <a href="mailto:info@digitalforge.be" rel="noreferrer" className="flex flex-row gap-2 items-center">
-            <BiMailSend size={128} className="h-12 w-12 lg:h-24 lg:w-24" color="#3963ed" />
-            <p className="bg-gradient-to-r blur-xs from-[#3963ed] to-blue-400 py-2 bg-clip-text overflow-visible text-xl lg:text-4xl box-content font-extrabold text-transparent text-center select-none">
+            <MdEmail size={128} className="h-12 w-12 lg:h-24 lg:w-24" color="#3954ed" />
+            <p className="bg-gradient-to-r blur-xs from-[#3954ed] to-blue-400 py-2 bg-clip-text overflow-visible text-xl lg:text-4xl box-content font-extrabold text-transparent text-center select-none">
               {t("contact-mail")}
             </p>
           </a>
