@@ -1,20 +1,20 @@
-import dflogo from "../../../public/assets/logos/dflogo.svg";
 import bannerone from "../../../public/assets/images/homepagebanner.jpg";
 import AnimatedBackground from "@/components/fluff/AnimatedBackground";
 import marketing from "../../../public/assets/images/marketing.png";
-import website from "../../../public/assets/images/website.png";
-import map from "../../../public/assets/images/map.png";
 import maplogos from "../../../public/assets/images/mapslogos.png";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import website from "../../../public/assets/images/website.png";
 import InfiniteCarousel from "@/components/fluff/AutoCarousel";
 import design from "../../../public/assets/images/design.png";
 import { ButtonColorOut } from "@/components/ButtonColorOut";
+import dflogo from "../../../public/assets/logos/dflogo.svg";
 import { NavLink } from "@/components/navigation/NavLink";
 import { BoxDiv } from "@/components/containers/box-div";
-import { FaArrowUp } from "react-icons/fa";
+import map from "../../../public/assets/images/map.png";
 import { useTranslations } from "next-intl";
+import { FaArrowUp } from "react-icons/fa";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 const Service = ({
   title,
@@ -172,7 +172,7 @@ export default function Home() {
               title={t("services-3-title")}
               image={design}
               buttonText={t("services-1-button")}
-              href={"/services/brand-identity/design"}
+              href={"/services/marketing/adwords"}
               alt={"Design Image"}
             />
             <Service
