@@ -245,7 +245,7 @@ export default function Home() {
           </div>
         </div>
       </BoxDiv>
-      <BoxDiv className="relative w-full bg-white/90">
+      <BoxDiv className="relative w-full bg-white">
         <div className="flex flex-col lg:flex-row gap-6 justify-between items-center max-w-[1200px] mx-auto">
           <a href="https://api.whatsapp.com/send?phone=32494550687" target="_blank" rel="noreferrer" className="flex flex-row gap-2 items-center">
             <IoLogoWhatsapp size={128} className="h-12 w-12 lg:h-24 lg:w-24" color="#5a916e" />
