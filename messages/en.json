@@ -158,7 +158,6 @@
     "brand-identity": "Brand Identity",
     "design-title": "Brand Design",
     "catalogue-title": "Digital Catalogue",
-    "maps-title": "Map Location",
     "web-design-intro": "As one of the leading companies in our country, we offer corporate web design, web development, corporate identity design, and digital marketing solutions in a professional and wide range of services for our valued clients. For us, the web design development process is no longer just business; it is an artistic process where bright ideas blend together. Our primary principle is to always convey the right visual messages to our target audience through this process. Depending on the service you request, we constantly provide you with easily usable and excellently designed websites that digital technology offers.",
     "web-design-title-1": "The Web Design Services We Offer",
     "web-design-text-1": "As DigitalForge, we can say that we provide some advantages to our clients in the web design process. First, we offer a corporate virtual office available 24/7 through websites with modern interfaces and practical management panels. This way, when our clients want to get in touch with us, they can do so at any time.",
@@ -241,6 +240,9 @@
     "website-optimization": "Website Optimization",
     "website-optimization-details": "With research on your target market and competitors, DigitalForge begins the process of optimizing your website for search engines. A title tag will appear in search results; this is your page’s title, and it should capture the reader’s attention and encourage them to click. Your title tag should also include your targeted keyword. A meta description will also appear in search results, which describes your page and expands on the title to motivate users to visit your site. Like your title tag, your meta description should include targeted and relevant keywords.",
     "search-traffic": "Billions of searches are made online every day, which represents a huge amount of highly targeted traffic. Many people search for specific products and services with the intention to buy. These searches are known to have commercial intent, meaning they clearly indicate that the user wants to purchase something.",
-    "organic-traffic": "Are you ready to optimize your site for organic search? Contact our SEO team to consult with an experienced strategist who will not only help improve your search engine rankings but also increase revenue from those rankings."
+    "organic-traffic": "Are you ready to optimize your site for organic search? Contact our SEO team to consult with an experienced strategist who will not only help improve your search engine rankings but also increase revenue from those rankings.",
+    "maps-title": "Maps Registration Services",
+    "maps-text": "Company registrations on today's most used search engines provide a great opportunity to reach potential customers. Businesses that create a location on maps have the chance to get a step ahead of their competitors in terms of visibility. By completing your business's location setup, you can instantly appear in front of potential customers on various devices.",
+    "contact-us-text": "Get in touch with us today, do no waste any time that can be spent on the growth of your digital presence. We are ready to help you reach the top."
   }
 }

@@ -2,6 +2,8 @@ import bannerone from "../../../public/assets/images/homepagebanner.jpg";
 import AnimatedBackground from "@/components/fluff/AnimatedBackground";
 import marketing from "../../../public/assets/images/marketing.png";
 import website from "../../../public/assets/images/website.png";
+import map from "../../../public/assets/images/map.png";
+import maplogos from "../../../public/assets/images/mapslogos.png";
 import InfiniteCarousel from "@/components/fluff/AutoCarousel";
 import design from "../../../public/assets/images/design.png";
 import { ButtonColorOut } from "@/components/ButtonColorOut";
@@ -157,15 +159,6 @@ export default function Home() {
         <div className="flex flex-col gap-6 items-center text-white justify-center max-w-[1500px] mx-auto">
           <div className="grid grid-cols-1 gap-12 w-full">
             <Service
-              text={t("services-1-text")}
-              title={t("services-1-title")}
-              image={marketing}
-              buttonText={t("services-1-button")}
-              href={"/services/marketing/social-media"}
-              alt={"Marketing Image"}
-            />
-            <Service
-              right
               text={t("services-2-text")}
               title={t("services-2-title")}
               image={website}
@@ -174,6 +167,7 @@ export default function Home() {
               alt={"Website Image"}
             />
             <Service
+              right
               text={t("services-3-text")}
               title={t("services-3-title")}
               image={design}
@@ -181,6 +175,28 @@ export default function Home() {
               href={"/services/brand-identity/design"}
               alt={"Design Image"}
             />
+            <Service
+              text={t("services-1-text")}
+              title={t("services-1-title")}
+              image={marketing}
+              buttonText={t("services-1-button")}
+              href={"/services/marketing/social-media"}
+              alt={"Marketing Image"}
+            />
+          </div>
+        </div>
+      </BoxDiv>
+      <BoxDiv className="bg-black/90">
+        <div className="grid max-w-[1500px] grid-cols-1 lg:grid-cols-2 w-full mx-auto">
+          <div className="relative h-[400px] w-full">
+            <Image priority src={map} alt="Maps on phone" className="w-full absolute -z-10" fill style={{ objectFit: "contain" }} />
+          </div>
+          <div className="h-[400px] gap-12 w-full text-white flex flex-col items-start justify-center">
+            <h2 className="text-2xl font-bold">{t("maps-title")}</h2>
+            <p className="font-semibold">{t("maps-text")}</p>
+            <div className="relative h-[100px] w-full">
+              <Image priority src={maplogos} alt="Maps on phone" className="w-full absolute -z-10" fill style={{ objectFit: "contain" }} />
+            </div>
           </div>
         </div>
       </BoxDiv>
@@ -225,7 +241,7 @@ export default function Home() {
           </div>
         </div>
       </BoxDiv>
-      <BoxDiv className="relative w-full">
+      <BoxDiv className="relative w-full bg-black/90">
         <div className="flex flex-col lg:flex-row gap-6 justify-between items-center max-w-[1200px] mx-auto">
           <a href="https://api.whatsapp.com/send?phone=32494550687" target="_blank" rel="noreferrer" className="flex flex-row gap-2 items-center">
             <FaWhatsapp size={128} className="h-12 w-12 lg:h-24 lg:w-24" color="#25d366" />

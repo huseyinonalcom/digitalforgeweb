@@ -6,28 +6,32 @@ export default function Contact() {
   const t = useTranslations();
 
   return (
-    <div className="w-full flex flex-row justify-around gap-5 p-12">
+    <div className="w-full flex lg:flex-row flex-col justify-center items-center max-w-screen-xl gap-5 p-12 mx-auto">
+      <div className="flex flex-col items-end max-w-[400px] gap-4">
+        <p className="mt-4 font-semibold text-lg max-w-[400px]">{t("contact-us-text")}</p>
+        <p>-DigitalForge</p>
+      </div>
       <form
-        className="mx-auto flex w-full max-w-[1000px] flex-col items-center justify-center gap-2"
+        className="mx-auto w-full max-w-[500px] grid grid-cols-1 items-center justify-center gap-2"
         action="https://formsubmit.co/info@digitalforge.be"
         encType="multipart/form-data"
         method="POST"
       >
-        <h2 className="flex flex-row items-center gap-2 text-4xl font-bold text-[#363332]">{t("contact-us")}</h2>
-        <div className="flex w-full flex-col gap-2 md:flex-row">
-          <div className="w-full md:w-6/12">
+        <h2 className="mx-auto text-4xl font-bold text-[#363332]">{t("contact-us")}</h2>
+        <div className="flex w-full flex-col gap-2">
+          <div className="w-full">
             <OutlinedInput required type="text" name="Name" label={t("your-name")} placeholder={t("your-name")} />
           </div>
-          <div className="w-full md:w-6/12">
+          <div className="w-full">
             <OutlinedInput required type="text" name="E-mail" label={t("your-email")} placeholder={t("your-email")} />
           </div>
         </div>
 
-        <div className="flex w-full flex-col gap-2 md:flex-row">
-          <div className="w-full md:w-6/12">
+        <div className="flex w-full flex-col gap-2">
+          <div className="w-full">
             <OutlinedInput type="text" name="Phone" label={t("your-phone")} placeholder={t("your-phone")} />
           </div>
-          <div className="w-full md:w-6/12">
+          <div className="w-full">
             <OutlinedInput type="text" name="Company" label={t("your-company")} placeholder={t("your-company")} />
           </div>
         </div>
@@ -40,7 +44,7 @@ export default function Contact() {
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_template" value="box" />
         <ButtonColorOut name="Send" aria-label="Send" type="submit">
-          {t("send")}
+          <div className="w-full">{t("send")}</div>
         </ButtonColorOut>
       </form>
     </div>
