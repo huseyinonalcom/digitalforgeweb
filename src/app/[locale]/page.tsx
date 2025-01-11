@@ -55,7 +55,7 @@ const Service = ({
       {!right ? (
         <div className="hidden flex-row gap-2 items-center justify-center w-full rounded-md text-white p-4 lg:flex">
           <div className="w-1/2 flex flex-col items-end">
-            <div className="w-[530px] flex flex-col items-end gap-12">
+            <div className="w-[590px] flex flex-col items-end gap-12">
               <h1 className="text-3xl font-bold text-right">{title}</h1>
               <p className="text-right">{text}</p>
               <Link href={href} className="bg-black text-white rounded-md pr-8 pl-4 py-2 mt-4 flex flex-row gap-1 items-center ml-auto">
@@ -76,7 +76,7 @@ const Service = ({
             <Image priority src={image} alt={alt} className="absolute" fill style={{ objectFit: "contain" }} />
           </div>
           <div className="w-1/2 flex flex-col items-start">
-            <div className="w-[530px] flex flex-col items-start gap-12">
+            <div className="w-[590px] flex flex-col items-start gap-12">
               <h1 className="text-3xl font-bold text-left">{title}</h1>
               <p className="text-left">{text}</p>
               <Link href={href} className="bg-black text-white rounded-md pr-8 pl-4 py-2 mt-4 flex flex-row gap-1 items-center mr-auto">
