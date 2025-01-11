@@ -1,3 +1,4 @@
+import dflogo from "../../../public/assets/logos/dflogo.svg";
 import bannerone from "../../../public/assets/images/homepagebanner.jpg";
 import AnimatedBackground from "@/components/fluff/AnimatedBackground";
 import marketing from "../../../public/assets/images/marketing.png";
@@ -208,14 +209,14 @@ export default function Home() {
       </BoxDiv>
       <BoxDiv className="bg-white">
         <div className="grid max-w-[1500px] grid-cols-1 lg:grid-cols-3 mx-auto">
-          <div className="col-span-1">
+          <div className="col-span-1 pr-4">
             <h1 className="text-5xl font-black ml-auto">{t("why-us-title")}</h1>
+            <div className="relative w-full h-48">
+              <Image priority src={dflogo} alt="DigitalForge" className="absolute" fill style={{ objectFit: "contain" }} />
+            </div>
           </div>
           <div className="col-span-2">
             <div className="flex flex-col gap-2 items-start rounded-md p-4 min-h-36">
-              <div className="flex flex-row items-center justify-between w-full">
-                <h1 className="text-2xl font-black">{t("why-us-4-title")}</h1>
-              </div>
               <p>{t("why-us-4-text")}</p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 w-full">
