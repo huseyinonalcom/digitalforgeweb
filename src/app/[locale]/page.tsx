@@ -248,13 +248,13 @@ export default function Home() {
       <BoxDiv className="relative w-full bg-white">
         <div className="flex flex-col lg:flex-row gap-6 justify-between items-center max-w-[1200px] mx-auto">
           <a href="https://api.whatsapp.com/send?phone=32494550687" target="_blank" rel="noreferrer" className="flex flex-row gap-2 items-center">
-            <IoLogoWhatsapp size={128} className="h-12 w-12 lg:h-24 lg:w-24" color="#5a916e" />
+            <IoLogoWhatsapp size={128} className="h-12 w-12 lg:h-24 lg:w-24 animate-wiggle" color="#5a916e" />
             <p className="bg-gradient-to-r blur-xs from-[#5a916e] py-2 to-teal-500 bg-clip-text text-xl lg:text-4xl box-content font-extrabold text-transparent text-center select-none">
               {t("contact-whatsapp")}
             </p>
           </a>
           <a href="mailto:info@digitalforge.be" rel="noreferrer" className="flex flex-row gap-2 items-center">
-            <MdEmail size={128} className="h-12 w-12 lg:h-24 lg:w-24" color="#3954ed" />
+            <MdEmail size={128} className="h-12 w-12 lg:h-24 lg:w-24 animate-wiggle" color="#3954ed" />
             <p className="bg-gradient-to-r blur-xs from-[#3954ed] to-blue-400 py-2 bg-clip-text overflow-visible text-xl lg:text-4xl box-content font-extrabold text-transparent text-center select-none">
               {t("contact-mail")}
             </p>
